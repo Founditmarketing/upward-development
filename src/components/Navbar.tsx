@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <Link to="/" className="flex items-center">
-            <img src="/logo.jpg" alt="Upward Development" className="h-10 sm:h-12 mix-blend-darken contrast-125 brightness-110 object-contain" />
+            <img src="/logo-2.png" alt="Upward Development" className="h-10 sm:h-12 mix-blend-darken contrast-125 brightness-110 object-contain" />
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
