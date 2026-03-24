@@ -13,6 +13,7 @@ import {
   Hammer,
   Mail
 } from 'lucide-react';
+import ReviewSlider from '../components/ReviewSlider';
 
 export default function Home() {
   return (
@@ -320,15 +321,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-6 bg-white border border-gray-100 rounded-sm shadow-sm mt-8">
-                  <div className="flex items-center gap-2 mb-2">
-                    {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
-                  </div>
-                  <p className="font-bold text-lg mb-2">5-Star Reliability</p>
-                  <a href="#" className="text-primary font-semibold hover:underline flex items-center gap-1">
-                    Read our Google Reviews <ChevronRight className="w-4 h-4" />
-                  </a>
-                </div>
+                <ReviewSlider />
               </div>
             </motion.div>
             
