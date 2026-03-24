@@ -10,11 +10,8 @@ export default function Navbar() {
     <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="bg-primary p-2 rounded-sm">
-              <Building2 className="w-6 h-6 text-white" />
-            </div>
-            <span className="font-heading font-bold text-2xl tracking-tight">Upward<span className="text-primary">Development</span></span>
+          <Link to="/" className="flex items-center">
+            <img src="/logo.jpg" alt="Upward Development" className="h-10 sm:h-12 mix-blend-darken contrast-125 brightness-110 object-contain" />
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">

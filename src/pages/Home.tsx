@@ -17,7 +17,20 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-[#0a0f1c]">
+      <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        {/* Background Video & Gradient Overlay */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <video 
+            src="/drone-hero.mp4" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover transform scale-[1.2] origin-top-left pointer-events-none opacity-90"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-[#0a0f1c]/90 to-[#0a0f1c]/80"></div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             
@@ -40,12 +53,11 @@ export default function Home() {
                 style={{ clipPath: 'polygon(50% 0%, 100% 15%, 100% 100%, 0% 100%, 0% 15%)' }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&q=80" 
-                  alt="Construction Site" 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
+                  src="/arrow-img.jpg" 
+                  alt="Upward Development Property" 
+                  className="w-full h-full object-cover transform scale-[1.3] origin-top-right"
                 />
-                <div className="absolute inset-0 bg-black/10"></div>
+                <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
               </div>
             </motion.div>
 
@@ -127,10 +139,9 @@ export default function Home() {
             >
               <div className="aspect-square bg-gray-200 rounded-sm overflow-hidden relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80" 
-                  alt="Construction Team" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  referrerPolicy="no-referrer"
+                  src="/about-img.jpg" 
+                  alt="About Upward Development" 
+                  className="w-full h-full object-cover transform scale-[1.4] origin-bottom-left grayscale hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute inset-0 border-8 border-primary/20 pointer-events-none"></div>
               </div>
@@ -145,8 +156,8 @@ export default function Home() {
 
       {/* Services Section */}
       <section id="services" className="py-24 bg-black text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-luminosity"></div>
+        <div className="absolute inset-0 opacity-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/services-bg.jpg')] bg-cover bg-center mix-blend-luminosity transform scale-[1.4] origin-bottom-left"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 

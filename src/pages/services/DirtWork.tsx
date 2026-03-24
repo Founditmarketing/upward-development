@@ -8,10 +8,9 @@ export default function DirtWork() {
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img 
-            src="https://images.unsplash.com/photo-1579847188804-ecba0e2ea330?auto=format&fit=crop&q=80" 
+            src="/dirtwork-hero.jpg" 
             alt="Dirt Work" 
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -36,36 +35,37 @@ export default function DirtWork() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Comprehensive Site Preparation</h2>
+              <h2 className="text-3xl font-bold mb-6">Quality From the Ground Up</h2>
               <div className="w-16 h-1 bg-primary mb-8"></div>
               <p className="text-lg text-gray-600 mb-8">
-                Before any construction can begin, the ground must be properly prepared. Our experienced team handles all aspects of dirt work, ensuring a solid foundation for your project. We are equipped to handle properties of any size in the Lake Charles area.
+                At Upward Development, we answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. We combine consistent communication and clear scheduling with a refusal to compromise on quality. Our goal is to maximize your property's value through organized project management and low overhead. Based in Lake Charles, we specialize in expert dirt work, ensuring every project—regardless of size—starts on a rock-solid foundation.
               </p>
               
               <ul className="space-y-4">
                 {[
-                  "Land Clearing & Debris Removal",
-                  "Culvert Installations",
-                  "Pond Digging & Shaping",
-                  "House Pads & Building Foundations",
-                  "Final Grading & Leveling",
-                  "Driveway Preparation"
+                  { title: "Land Clearing & Debris Removal", desc: "Professional lot clearing for a clean start." },
+                  { title: "House Pads & Foundations", desc: "Precision-engineered bases for any structure." },
+                  { title: "Culvert Installations", desc: "Essential drainage and property access solutions." },
+                  { title: "Pond Digging & Shaping", desc: "Custom excavation for functional or decorative ponds." },
+                  { title: "Driveway Preparation", desc: "Proper sub-grade work for long-lasting stability." },
+                  { title: "Final Grading & Leveling", desc: "Expert contouring for optimal runoff and finishing." }
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                    <span className="text-gray-700 font-medium">{item}</span>
+                    <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-1" />
+                    <span className="text-gray-600"><strong className="text-gray-900">{item.title}:</strong> {item.desc}</span>
                   </li>
                 ))}
               </ul>
             </div>
             
             <div className="space-y-8">
-              <img 
-                src="https://images.unsplash.com/photo-1585246604297-7c914e672727?auto=format&fit=crop&q=80" 
-                alt="Excavator at work" 
-                className="w-full h-64 object-cover rounded-sm shadow-lg"
-                referrerPolicy="no-referrer"
-              />
+              <div className="overflow-hidden rounded-sm shadow-lg w-full h-64">
+                <img 
+                  src="/dirtwork-body.jpg" 
+                  alt="Excavator at work" 
+                  className="w-full h-full object-cover transform scale-[1.2] origin-top-right"
+                />
+              </div>
               <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
                 <h3 className="text-xl font-bold mb-4">Ready to start your project?</h3>
                 <p className="text-gray-600 mb-6">Contact us today for a free estimate on your land clearing or dirt work needs.</p>

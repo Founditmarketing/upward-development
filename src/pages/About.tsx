@@ -7,10 +7,9 @@ export default function About() {
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img 
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80" 
+            src="/about-hero.jpg" 
             alt="About Us" 
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -37,21 +36,16 @@ export default function About() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
-              <h2 className="text-4xl font-bold mb-6">The LaCour Family Story</h2>
+              <h2 className="text-4xl font-bold mb-6">Who We Are</h2>
               <div className="w-20 h-1.5 bg-primary mb-8"></div>
               
               <div className="space-y-6 text-lg text-gray-600">
                 <p>
-                  After many years in the real estate, timber, car wash and billboard business, we started Upward Development in 2024 to obtain the licenses and insurance to construct our larger projects. We immediately found that our entire family loved the construction business, so we started doing a few projects for others.
+                  Founded in 2024, Upward Development was born from a history in the real estate, timber, carwash, and billboard industries. What began as a strategic move to secure the licensing and insurance necessary for our own large-scale projects quickly evolved into a true family passion. We discovered a collective love for the building process, leading us to extend our expertise beyond our own portfolio to serve the needs of our community.
                 </p>
                 <p>
-                  One thing led to another and now we are scaling upward to meet not only our needs, but also the construction needs of many others like you. Every one of our companies are built on a reliable team, quality work and reasonable prices.
+                  Today, we are scaling rapidly to provide high-quality construction services for clients like you, driven by the same principles that have defined all our ventures: a reliable team, superior craftsmanship, and fair, transparent pricing. Most importantly, our mission transcends the job site; we approach every project with a commitment to excellence, ensuring all our work is pointed upward for the glory of God.
                 </p>
-                <div className="bg-white p-6 border-l-4 border-primary shadow-sm mt-8">
-                  <p className="text-xl font-heading italic text-gray-900">
-                    "All of our work is pointed upward for the glory of God."
-                  </p>
-                </div>
               </div>
             </motion.div>
             
@@ -62,12 +56,11 @@ export default function About() {
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
               className="relative"
             >
-              <div className="aspect-square bg-gray-200 rounded-sm overflow-hidden relative">
+              <div className="bg-gray-200 rounded-sm overflow-hidden relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80" 
-                  alt="Construction Team" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  referrerPolicy="no-referrer"
+                  src="/about-body.jpg" 
+                  alt="About Upward Development" 
+                  className="w-full h-auto transform scale-[1.15] origin-bottom-right grayscale hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute inset-0 border-8 border-primary/20 pointer-events-none"></div>
               </div>

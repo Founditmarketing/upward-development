@@ -8,10 +8,9 @@ export default function RealEstate() {
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img 
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80" 
-            alt="Real Estate" 
+            src="/real-estate-hero.jpg" 
+            alt="Real Estate Investments" 
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -62,10 +61,9 @@ export default function RealEstate() {
             
             <div className="space-y-8">
               <img 
-                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80" 
-                alt="Real estate development" 
+                src="/real-estate-body-2.jpg" 
+                alt="Real estate development interior" 
                 className="w-full h-64 object-cover rounded-sm shadow-lg"
-                referrerPolicy="no-referrer"
               />
               <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
                 <h3 className="text-xl font-bold mb-4">Have a property to sell?</h3>

@@ -8,10 +8,9 @@ export default function SteelBuildings() {
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img 
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" 
-            alt="Steel Buildings" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+            src="/services-bg.jpg" 
+            alt="Steel Buildings Hero" 
+            className="w-full h-full object-cover transform scale-[1.4] origin-bottom-left"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -61,12 +60,13 @@ export default function SteelBuildings() {
             </div>
             
             <div className="space-y-8">
-              <img 
-                src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&q=80" 
-                alt="Steel construction" 
-                className="w-full h-64 object-cover rounded-sm shadow-lg"
-                referrerPolicy="no-referrer"
-              />
+              <div className="overflow-hidden rounded-sm shadow-lg w-full h-64">
+                <img 
+                  src="/steel-body-2.jpg" 
+                  alt="Steel construction welding" 
+                  className="w-full h-full object-cover transform scale-[1.25] origin-bottom-right brightness-110"
+                />
+              </div>
               <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
                 <h3 className="text-xl font-bold mb-4">Get a Custom Quote</h3>
                 <p className="text-gray-600 mb-6">Let's discuss the specifications for your next steel building project.</p>

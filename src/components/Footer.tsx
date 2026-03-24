@@ -16,11 +16,8 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="bg-primary p-2 rounded-sm">
-                <Building2 className="w-6 h-6 text-white" />
-              </div>
-              <span className="font-heading font-bold text-2xl tracking-tight">Upward<span className="text-primary">Development</span></span>
+            <div className="flex items-center mb-6">
+              <img src="/logo.jpg" alt="Upward Development" className="h-10 sm:h-12 invert hue-rotate-[180deg] brightness-125 mix-blend-screen object-contain" />
             </div>
             <p className="text-gray-400 mb-6">
               All of our work is pointed upward for the glory of God. Elevating property values in Lake Charles, LA with commercial-grade strength.
@@ -53,10 +50,10 @@ export default function Footer() {
             <div className="mt-6">
               <h5 className="text-sm font-bold uppercase tracking-wider mb-3 text-gray-500">Social Media</h5>
               <div className="flex gap-4">
-                <a href="#" className="text-gray-400 hover:text-primary transition-colors">Instagram: @upwarddevelopmentllc</a>
+                <a href="https://www.instagram.com/upwarddevelopmentllc/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">Instagram: @upwarddevelopmentllc</a>
               </div>
               <div className="flex gap-4 mt-2">
-                <a href="#" className="text-gray-400 hover:text-primary transition-colors">Facebook: Upward Development LLC</a>
+                <a href="https://www.facebook.com/UpwardDevelopmentLLC" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">Facebook: Upward Development LLC</a>
               </div>
             </div>
           </div>

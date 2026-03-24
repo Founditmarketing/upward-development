@@ -8,10 +8,9 @@ export default function SuperHomes() {
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img 
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" 
-            alt="Super Homes" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+            src="/super-hero-2.jpg" 
+            alt="Super Homes Hero" 
+            className="w-full h-full object-cover transform scale-[1.2] origin-bottom-left"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -61,12 +60,13 @@ export default function SuperHomes() {
             </div>
             
             <div className="space-y-8">
-              <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" 
-                alt="Modern interior" 
-                className="w-full h-64 object-cover rounded-sm shadow-lg"
-                referrerPolicy="no-referrer"
-              />
+              <div className="overflow-hidden rounded-sm shadow-lg w-full h-64">
+                <img 
+                  src="/super-body.jpg" 
+                  alt="Super Homes Construction" 
+                  className="w-full h-full object-cover transform scale-[1.2] origin-bottom-left"
+                />
+              </div>
               <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
                 <h3 className="text-xl font-bold mb-4">Interested in a Super Home?</h3>
                 <p className="text-gray-600 mb-6">Contact us to learn more about the design and construction process for our Super Homes.</p>
