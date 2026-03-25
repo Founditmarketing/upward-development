@@ -271,6 +271,40 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+
+          {/* Specialized Services Tags */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-16 pt-12 border-t border-gray-800 text-center"
+          >
+            <h4 className="text-xl font-bold mb-8 text-white">Specialized Site Preparation Services</h4>
+            <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
+              {[
+                { name: 'House Pads', path: '/services/house-pads' },
+                { name: 'Mobile Home Pads', path: '/services/mobile-home-pads' },
+                { name: 'Forestry Mulching', path: '/services/forestry-mulching' },
+                { name: 'Residential Lot Clearing', path: '/services/residential-lot-clearing' },
+                { name: 'Underbrush Removal', path: '/services/underbrush-removal' },
+                { name: 'Commercial Site Prep', path: '/services/commercial-site-prep' },
+                { name: 'Yard Grading', path: '/services/yard-grading' },
+                { name: 'Retention Ponds', path: '/services/retention-ponds' },
+                { name: 'Final Grading', path: '/services/final-grading' },
+                { name: 'Culvert Installation', path: '/services/culvert-installation' },
+              ].map((service, i) => (
+                <Link
+                  key={i}
+                  to={service.path}
+                  className="px-5 py-2.5 bg-gray-900 border border-gray-700 text-gray-300 rounded-full text-sm font-semibold hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
+                >
+                  {service.name}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+
         </div>
       </section>
 
