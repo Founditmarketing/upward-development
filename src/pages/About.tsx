@@ -1,5 +1,32 @@
 import { motion } from 'motion/react';
 
+const teamMembers = [
+  {
+    name: 'Team Member',
+    role: 'Founder & CEO',
+    bio: 'Visionary leader with deep roots in real estate, timber, and development. Drives the mission and values of Upward Development forward every day.',
+    image: '/team-placeholder.png',
+  },
+  {
+    name: 'Team Member',
+    role: 'Operations Manager',
+    bio: 'Keeps every project on time and on budget. Coordinates crews, equipment, and logistics to deliver results clients can count on.',
+    image: '/team-placeholder.png',
+  },
+  {
+    name: 'Team Member',
+    role: 'Project Superintendent',
+    bio: 'Hands-on field leader with years of experience in site work, steel construction, and land development across Calcasieu Parish.',
+    image: '/team-placeholder.png',
+  },
+  {
+    name: 'Team Member',
+    role: 'Client Relations',
+    bio: 'First point of contact for every client. Ensures clear communication, honest estimates, and a seamless experience from first call to final walkthrough.',
+    image: '/team-placeholder.png',
+  },
+];
+
 export default function About() {
   return (
     <div className="pt-20">
@@ -26,7 +53,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Content */}
+      {/* Who We Are */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -72,6 +99,83 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Our Team */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Team</h2>
+            <div className="w-20 h-1.5 bg-primary mx-auto mb-6"></div>
+            <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+              Every project is personal. Meet the family behind the work.
+            </p>
+          </motion.div>
+
+          {/* Team Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+                className="group flex flex-col"
+              >
+                {/* Photo */}
+                <div className="relative overflow-hidden rounded-sm bg-gray-900 mb-5 aspect-square">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  />
+                  {/* Bottom accent bar */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                </div>
+
+                {/* Info */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                  <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">{member.role}</div>
+                  <p className="text-gray-500 text-sm leading-relaxed">{member.bio}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values Banner */}
+      <section className="py-16 bg-black text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-3 gap-12 text-center"
+          >
+            {[
+              { stat: 'Faith', label: 'Our Foundation' },
+              { stat: 'Family', label: 'Our Strength' },
+              { stat: 'Excellence', label: 'Our Standard' },
+            ].map((item, i) => (
+              <div key={i}>
+                <div className="text-3xl md:text-4xl font-bold text-primary font-heading mb-2">{item.stat}</div>
+                <div className="text-gray-400 uppercase tracking-widest text-sm font-semibold">{item.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
+
