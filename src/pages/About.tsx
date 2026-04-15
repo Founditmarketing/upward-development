@@ -2,28 +2,25 @@ import { motion } from 'motion/react';
 
 const teamMembers = [
   {
-    name: 'Team Member',
-    role: 'Founder & CEO',
-    bio: 'Visionary leader with deep roots in real estate, timber, and development. Drives the mission and values of Upward Development forward every day.',
-    image: '/team-placeholder.png',
+    name: 'Lucas LaCour',
+    role: 'Owner / Operator',
+    bio: 'Founder of Upward Development with deep roots in real estate, timber, car wash, and billboard industries. Lucas leads every project with a commitment to quality, integrity, and faith.',
+    email: 'lucas@upwarddevelopment.us',
+    image: '/team-lucas.jpg',
   },
   {
-    name: 'Team Member',
-    role: 'Operations Manager',
-    bio: 'Keeps every project on time and on budget. Coordinates crews, equipment, and logistics to deliver results clients can count on.',
-    image: '/team-placeholder.png',
+    name: 'Faith LaCour',
+    role: 'Operations Coordinator',
+    bio: 'Faith keeps the business running smoothly behind the scenes — managing communications, scheduling, and client relations to ensure every project goes off without a hitch.',
+    email: 'faith@upwardedevelopment.us',
+    image: '/team-faith.jpg',
   },
   {
-    name: 'Team Member',
-    role: 'Project Superintendent',
-    bio: 'Hands-on field leader with years of experience in site work, steel construction, and land development across Calcasieu Parish.',
-    image: '/team-placeholder.png',
-  },
-  {
-    name: 'Team Member',
-    role: 'Client Relations',
-    bio: 'First point of contact for every client. Ensures clear communication, honest estimates, and a seamless experience from first call to final walkthrough.',
-    image: '/team-placeholder.png',
+    name: 'Daniel LaCour',
+    role: 'Lead Operator',
+    bio: 'Daniel is the boots-on-the-ground force of Upward Development. From land clearing to steel erection, he brings skill, hustle, and precision to every job site.',
+    email: null,
+    image: '/team-daniel.jpg',
   },
 ];
 
@@ -119,7 +116,7 @@ export default function About() {
           </motion.div>
 
           {/* Team Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -144,7 +141,15 @@ export default function About() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
                   <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">{member.role}</div>
-                  <p className="text-gray-500 text-sm leading-relaxed">{member.bio}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-3">{member.bio}</p>
+                  {member.email && (
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="text-xs text-primary hover:underline"
+                    >
+                      {member.email}
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}
