@@ -8,7 +8,7 @@ export default function SteelBuildings() {
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img 
-            src="/services-bg.jpg" 
+            src="/steel-body-2.jpg" 
             alt="Steel Buildings Hero" 
             className="w-full h-full object-cover transform scale-[1.4] origin-bottom-left"
           />
