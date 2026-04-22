@@ -48,11 +48,11 @@ export default function Navbar() {
                     <div className="grid grid-cols-2 gap-x-2 gap-y-1">
                       <Link to="/services/house-pads" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>House Pads</Link>
                       <Link to="/services/mobile-home-pads" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Mobile Home Pads</Link>
-                      <Link to="/services/residential-lot-clearing" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Lot Clearing</Link>
+                      <Link to="/services/residential-lot-clearing" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Land Clearing</Link>
                       <Link to="/services/underbrush-removal" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Underbrush Removal</Link>
                       <Link to="/services/commercial-site-prep" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Commercial Prep</Link>
                       <Link to="/services/yard-grading" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Yard Grading</Link>
-                      <Link to="/services/retention-ponds" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Retention Ponds</Link>
+                      <Link to="/services/retention-ponds" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Ponds</Link>
                       <Link to="/services/final-grading" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Final Grading</Link>
                       <Link to="/services/culvert-installation" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary rounded-sm transition-colors" onClick={() => setIsServicesOpen(false)}>Culvert Installation</Link>
                     </div>
@@ -96,11 +96,11 @@ export default function Navbar() {
               <div className="grid grid-cols-2 gap-2 pl-4">
                 <Link to="/services/house-pads" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>House Pads</Link>
                 <Link to="/services/mobile-home-pads" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Mobile Home Pads</Link>
-                <Link to="/services/residential-lot-clearing" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Lot Clearing</Link>
+                <Link to="/services/residential-lot-clearing" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Land Clearing</Link>
                 <Link to="/services/underbrush-removal" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Underbrush Removal</Link>
                 <Link to="/services/commercial-site-prep" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Commercial Prep</Link>
                 <Link to="/services/yard-grading" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Yard Grading</Link>
-                <Link to="/services/retention-ponds" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Retention Ponds</Link>
+                <Link to="/services/retention-ponds" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Ponds</Link>
                 <Link to="/services/final-grading" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Final Grading</Link>
                 <Link to="/services/culvert-installation" className="block py-1 text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>Culvert Installation</Link>
               </div>

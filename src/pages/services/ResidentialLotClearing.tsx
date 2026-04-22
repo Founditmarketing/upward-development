@@ -54,9 +54,9 @@ export default function ResidentialLotClearing() {
             <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase mb-4">
               <Home className="w-5 h-5" /> Detailed Service Entity
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Residential Lot Clearing</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Land Clearing</h1>
             <p className="text-xl text-gray-300 max-w-2xl">
-              Upward Development provides professional lot clearing specifically structured to prepare wooded land for new home construction in Lake Charles.
+              Upward Development provides professional land clearing to prepare wooded land for new construction in Lake Charles.
             </p>
           </motion.div>
         </div>
@@ -96,7 +96,7 @@ export default function ResidentialLotClearing() {
               </div>
               <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
                 <h3 className="text-xl font-bold mb-4">Ready to start clearing?</h3>
-                <p className="text-gray-600 mb-6">Contact us today for a free estimate on your residential lot prep.</p>
+                <p className="text-gray-600 mb-6">Contact us today for a free estimate on your land clearing needs.</p>
                 <a href="/#contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
                   Get a Quote
                 </a>

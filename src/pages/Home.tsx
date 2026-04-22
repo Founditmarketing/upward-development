@@ -285,11 +285,11 @@ export default function Home() {
               {[
                 { name: 'House Pads', path: '/services/house-pads' },
                 { name: 'Mobile Home Pads', path: '/services/mobile-home-pads' },
-                { name: 'Residential Lot Clearing', path: '/services/residential-lot-clearing' },
+                { name: 'Land Clearing', path: '/services/residential-lot-clearing' },
                 { name: 'Underbrush Removal', path: '/services/underbrush-removal' },
                 { name: 'Commercial Site Prep', path: '/services/commercial-site-prep' },
                 { name: 'Yard Grading', path: '/services/yard-grading' },
-                { name: 'Retention Ponds', path: '/services/retention-ponds' },
+                { name: 'Ponds', path: '/services/retention-ponds' },
                 { name: 'Final Grading', path: '/services/final-grading' },
                 { name: 'Culvert Installation', path: '/services/culvert-installation' },
               ].map((service, i) => (

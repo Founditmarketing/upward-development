@@ -74,7 +74,7 @@ export default function RetentionPonds() {
               <ul className="space-y-4">
                 {[
                   { title: "Detention Ponds", desc: "Temporarily holding runoff to prevent downstream flooding." },
-                  { title: "Retention Ponds", desc: "Permanent water pools designed for ongoing storm management." },
+                  { title: "Ponds", desc: "Permanent water pools designed for ongoing storm management." },
                   { title: "Livestock Tanks", desc: "Digging reliable watering holes for agricultural properties." },
                   { title: "Decorative Ponds", desc: "Aesthetic excavations for large estates and residential landscaping." }
                 ].map((item, i) => (
@@ -95,7 +95,7 @@ export default function RetentionPonds() {
                 />
               </div>
               <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
-                <h3 className="text-xl font-bold mb-4">Need a retention pond?</h3>
+                <h3 className="text-xl font-bold mb-4">Need a pond dug?</h3>
                 <p className="text-gray-600 mb-6">Contact us today to quote your custom pond excavation.</p>
                 <a href="/#contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
                   Get a Free Estimate

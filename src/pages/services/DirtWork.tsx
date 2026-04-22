@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Tractor, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Tractor, ShieldCheck, CheckCircle2, Truck, MapPin } from 'lucide-react';
 
 export default function DirtWork() {
   return (
@@ -75,6 +75,65 @@ export default function DirtWork() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Delivered Dirt Section */}
+      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src="/dirtwork-hero.jpg" alt="Dirt Pit" className="w-full h-full object-cover" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7 }}
+            className="grid md:grid-cols-2 gap-16 items-center"
+          >
+            <div>
+              <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase mb-4">
+                <Truck className="w-5 h-5" /> Delivered to Your Door
+              </div>
+              <h2 className="text-4xl font-bold mb-6">Dirt Delivery Available</h2>
+              <div className="w-16 h-1 bg-primary mb-8"></div>
+              <p className="text-lg text-gray-300 mb-6">
+                Upward Development operates its own dirt pit located in <strong className="text-white">South Lake Charles, LA</strong>. That means we control the quality and availability of our fill dirt — and we can deliver it straight to your job site.
+              </p>
+              <p className="text-lg text-gray-300 mb-8">
+                Whether you need a few loads to level a yard or a large volume for a major site prep project, we have the equipment and the supply to get it done fast.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Premium fill dirt sourced from our own pit",
+                  "Delivery available throughout the Lake Charles area",
+                  "Ideal for house pads, yard leveling, and site prep",
+                  "Competitive pricing — no middle man"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href="/#contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
+                Get a Delivery Quote
+              </a>
+            </div>
+            <div className="bg-gray-800 border border-gray-700 rounded-sm p-10 text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <MapPin className="w-10 h-10 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Our Dirt Pit</h3>
+              <p className="text-primary font-bold text-lg mb-2">South Lake Charles, Louisiana</p>
+              <p className="text-gray-400 mb-8">
+                Owning our own supply means faster turnaround, consistent quality, and better pricing for our customers.
+              </p>
+              <a href="/#contact" className="inline-flex items-center gap-2 text-primary font-bold hover:text-white transition-colors">
+                <Truck className="w-5 h-5" /> Schedule a Delivery
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
