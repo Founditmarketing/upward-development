@@ -5,19 +5,29 @@ import { motion, AnimatePresence } from 'motion/react';
 const REVIEWS = [
   {
     id: 1,
-    text: "Upward Development completely transformed our property. The steel building was erected seamlessly and the team is highly professional.",
-    author: "John D.",
+    text: "Lucas is exceptional: attentive, respectful, and genuinely invested in the outcome. He approaches your project like it's personal to him, which builds tremendous trust and peace of mind. They treat every project with care and attention to detail, as if it were their own.",
+    author: "Allen Burleson",
   },
   {
     id: 2,
-    text: "Best dirt work in Lake Charles! They cleared our land in record time and the house pad was absolutely perfect.",
-    author: "Sarah M.",
+    text: "We hired Upward Development to clear a few acres and we're very satisfied with the work. Clear communication throughout and didn't leave until we gave them the ok. Looking forward to hiring them again!",
+    author: "Monica Miller",
   },
   {
     id: 3,
-    text: "Their communication and reliability are unmatched. Finding dependable contractors can be tough, but they earned every one of these 5 stars.",
-    author: "Michael R.",
-  }
+    text: "We used Upward Development to head up a million dollar addition to an event venue we own in south Lake Charles. They were wonderful to work with. They got there early and stayed late. Before they would make any changes to our original plans they made sure we knew the cost involved.",
+    author: "DeWanna Tarver",
+  },
+  {
+    id: 4,
+    text: "I hired Upward Development to build a shop for me. They met every time line that they promised me. Their quality of work definitely did not disappoint. Their price beat everyone around. Very professional and took time to explain anything that I had questions about.",
+    author: "Joshua Daniels",
+  },
+  {
+    id: 5,
+    text: "An amazing group of hard workers that are exceptional in their quality of work and in getting the job done in a timely manner. You do not have to stand over them to make sure they're doing what they are supposed to be doing, and they take much pride in their work.",
+    author: "Z Bellemin",
+  },
 ];
 
 export default function ReviewSlider() {
