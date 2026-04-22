@@ -28,6 +28,26 @@ const REVIEWS = [
     text: "An amazing group of hard workers that are exceptional in their quality of work and in getting the job done in a timely manner. You do not have to stand over them to make sure they're doing what they are supposed to be doing, and they take much pride in their work.",
     author: "Z Bellemin",
   },
+  {
+    id: 6,
+    text: "This company is awesome. I do work with them all the time. Highly recommended. 👍👍",
+    author: "Shawn Conner",
+  },
+  {
+    id: 7,
+    text: "Excellent, quick work! Built my business' shop and did a great job.",
+    author: "Joshua Thompson",
+  },
+  {
+    id: 8,
+    text: "Great communication, and everything came in on schedule and at the quoted price!",
+    author: "Eric Tarver",
+  },
+  {
+    id: 9,
+    text: "I use Upward Development for my underground electrical services. They do a great job and make it look like we didn't even dig a ditch 3 ft deep with electrical conduit underground.",
+    author: "Freddy Wimberly",
+  },
 ];
 
 export default function ReviewSlider() {
