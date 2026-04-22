@@ -22,6 +22,13 @@ const teamMembers = [
     email: null,
     image: '/team-daniel.jpg',
   },
+  {
+    name: 'Ryan',
+    role: 'Team Member',
+    bio: 'A dedicated member of the Upward Development crew, bringing hard work and commitment to every project on the job site.',
+    email: null,
+    image: '/team-ryan.jpg',
+  },
 ];
 
 export default function About() {
