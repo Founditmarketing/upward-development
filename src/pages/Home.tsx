@@ -285,7 +285,6 @@ export default function Home() {
               {[
                 { name: 'House Pads', path: '/services/house-pads' },
                 { name: 'Mobile Home Pads', path: '/services/mobile-home-pads' },
-                { name: 'Forestry Mulching', path: '/services/forestry-mulching' },
                 { name: 'Residential Lot Clearing', path: '/services/residential-lot-clearing' },
                 { name: 'Underbrush Removal', path: '/services/underbrush-removal' },
                 { name: 'Commercial Site Prep', path: '/services/commercial-site-prep' },
