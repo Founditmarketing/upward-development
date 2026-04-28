@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import DirtWork from './pages/services/DirtWork';
+import LandClearing from './pages/services/ResidentialLotClearing';
 import SteelBuildings from './pages/services/SteelBuildings';
 import SuperHomes from './pages/services/SuperHomes';
 import RealEstate from './pages/services/RealEstate';
@@ -32,6 +33,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services/dirt-work" element={<DirtWork />} />
+            <Route path="/services/land-clearing" element={<LandClearing />} />
             <Route path="/services/steel-buildings" element={<SteelBuildings />} />
             <Route path="/services/super-homes" element={<SuperHomes />} />
             <Route path="/services/real-estate" element={<RealEstate />} />

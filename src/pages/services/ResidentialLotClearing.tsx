@@ -1,108 +1,175 @@
 import { motion } from 'motion/react';
-import { Home, CheckCircle2 } from 'lucide-react';
-import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Phone, ChevronRight } from 'lucide-react';
 
-export default function ResidentialLotClearing() {
-  
-  // JSON-LD Schema to verify Upward Development provides this specific service
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "ExcavatingContractor",
-      "name": "Upward Development",
-      "url": "https://www.upward-development.com/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lake Charles",
-        "addressRegion": "LA",
-        "postalCode": "70601"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Site Preparation Services",
-        "itemListElement": [{
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Residential Lot Clearing",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Upward Development"
-            }
-          }
-        }]
-      }
-    });
-    document.head.appendChild(script);
-    return () => { document.head.removeChild(script); };
-  }, []);
+const HERO_BG   = 'https://static.wixstatic.com/media/d3dc00_00d38c623f6c4c368c5e0c3c05e37290f000.jpg/v1/fill/w_1920,h_800,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_00d38c623f6c4c368c5e0c3c05e37290f000.jpg';
+const BODY_IMG1 = 'https://static.wixstatic.com/media/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg';
+const BODY_IMG2 = 'https://static.wixstatic.com/media/d3dc00_910808829d0f4ccf873cb78e0ec85b6f~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_910808829d0f4ccf873cb78e0ec85b6f~mv2.jpg';
+const BODY_IMG3 = 'https://static.wixstatic.com/media/ca516a_b4d24804d9ea4575a95b744c1fbdb7e9~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/ca516a_b4d24804d9ea4575a95b744c1fbdb7e9~mv2.jpg';
 
+const pillars = [
+  {
+    label: 'The Right People',
+    body: 'We believe in our team and when you meet them, you will see why.',
+  },
+  {
+    label: 'The Right Motives',
+    body: "We are motivated to enhance the value of every property we touch. When we leave your property, we want it's value to have appreciated far beyond what you pay for our services.",
+  },
+  {
+    label: 'The Right Equipment',
+    body: 'We have the right equipment to be efficient; and efficiency adds value. From trench burners to specialized excavators, we are equipped to clear everything from a city lot to a 100 acre pasture conversion.',
+  },
+  {
+    label: 'The Right Price',
+    body: "We can't add value to your property if the work is overpriced. We want you to love our prices so much, that you're thinking of other ways we could add value to your property while we're there.",
+  },
+];
+
+const priorities = [
+  {
+    title: 'Communication',
+    body: "We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. If that's not enough, we also have a calendar and a plan and we talk about it with our customers and our team. You'll love it.",
+  },
+  {
+    title: 'Quality',
+    body: "It will never be our decision to sacrifice the quality of the work on your property. We want every customer to be so satisfied that you tell all of your friends how well the job was done.",
+  },
+  {
+    title: 'Value',
+    body: 'Our goal is to enhance the value of every property we touch. For this to happen, we recognize that we must keep our people organized, our customers engaged and our overhead low.',
+  },
+];
+
+export default function LandClearing() {
   return (
-    <div className="pt-20">
-      <section className="relative py-24 bg-black text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <img 
-            src="/dirtwork-hero.jpg" 
-            alt="Residential Lot Clearing" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase mb-4">
-              <Home className="w-5 h-5" /> Detailed Service Entity
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Land Clearing</h1>
-            <p className="text-xl text-gray-300 max-w-2xl">
-              Upward Development provides professional land clearing to prepare wooded land for new construction in Lake Charles.
-            </p>
-          </motion.div>
+    <div>
+      {/* ── HERO ─────────────────────────────────────────────────────── */}
+      <section
+        className="relative min-h-[60vh] flex items-center justify-center text-center text-white overflow-hidden"
+        style={{ paddingTop: '80px' }}
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('${HERO_BG}')` }}
+        />
+        <div className="absolute inset-0 bg-black/55" />
+
+        <motion.div
+          className="relative z-10 max-w-3xl mx-auto px-6 py-24"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <h1 className="text-6xl md:text-7xl font-bold tracking-wide mb-6">LAND CLEARING</h1>
+          <p className="text-xl text-gray-200 mb-10 max-w-xl mx-auto">
+            Land clearing is our favorite service to provide and we are equipped to clear any size property. References available upon request.
+          </p>
+          <a
+            href="tel:3184527653"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-10 py-4 uppercase tracking-widest text-sm transition-all hover:-translate-y-0.5 shadow-lg shadow-primary/30"
+          >
+            <Phone className="w-4 h-4" /> Call Now
+          </a>
+        </motion.div>
+      </section>
+
+      {/* ── 4 PILLARS ────────────────────────────────────────────────── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {pillars.map((p, i) => (
+              <motion.div
+                key={p.label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-primary font-bold text-2xl">{i + 1}</span>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{p.label}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{p.body}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Start Your Build with a Clean Slate</h2>
-              <div className="w-16 h-1 bg-primary mb-8"></div>
-              <p className="text-lg text-gray-600 mb-8">
-                Upward Development carefully removes trees, stumps, and debris, while preserving any specific designated mature trees you want to keep for your new home's landscaping, ensuring a verified foundation for your build.
-              </p>
-              
-              <ul className="space-y-4">
-                {[
-                  { title: "Selective Clearing", desc: "We leave the trees you love and remove the ones you don't." },
-                  { title: "Debris Removal", desc: "Complete hauling of unwanted limbs, trunks, and roots." },
-                  { title: "Stump Grinding", desc: "Eliminate tripping hazards and prepare for a flat yard." },
-                  { title: "Site Assessment", desc: "Professional evaluation of your lot before we break ground." }
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <span className="text-gray-600"><strong className="text-gray-900">{item.title}:</strong> {item.desc}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="space-y-8">
-              <div className="overflow-hidden rounded-sm shadow-lg w-full h-64">
-                <img 
-                  src="/dirtwork-body.jpg" 
-                  alt="Lot Clearing Equipment" 
-                  className="w-full h-full object-cover transform scale-[1.2] origin-top-right"
+
+      {/* ── PHOTO GALLERY ROW ────────────────────────────────────────── */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-4">
+            {[BODY_IMG1, BODY_IMG2, BODY_IMG3].map((src, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.96 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="aspect-[4/3] overflow-hidden shadow-md"
+              >
+                <img
+                  src={src}
+                  alt={`Land Clearing project ${i + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
-              </div>
-              <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
-                <h3 className="text-xl font-bold mb-4">Ready to start clearing?</h3>
-                <p className="text-gray-600 mb-6">Contact us today for a free estimate on your land clearing needs.</p>
-                <a href="/#contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
-                  Get a Quote
-                </a>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── OUR PRIORITIES ───────────────────────────────────────────── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-14"
+          >
+            <p className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-2">Our Priorities</p>
+            <h2 className="text-4xl font-bold text-gray-900">Communication. Quality. Value.</h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {priorities.map((p, i) => (
+              <motion.div
+                key={p.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="border-t-4 border-primary pt-6"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{p.title}</h3>
+                <p className="text-gray-500 leading-relaxed text-sm">{p.body}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FOOTER CTA STRIP ─────────────────────────────────────────── */}
+      <section className="bg-black text-white py-14 text-center">
+        <p className="text-lg font-medium text-gray-300 mb-4">Have Questions? Call or text</p>
+        <a
+          href="tel:3184527653"
+          className="text-3xl font-bold text-primary hover:text-white transition-colors"
+        >
+          318-452-7653
+        </a>
+        <div className="mt-6">
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 font-bold uppercase tracking-widest text-sm transition-all"
+          >
+            Click to Inquire Now <ChevronRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
     </div>
