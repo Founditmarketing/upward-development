@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Tractor, CheckCircle2 } from 'lucide-react';
+import { Trees, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const priorities = [
@@ -13,7 +13,7 @@ const priorities = [
   },
   {
     title: 'The Right Equipment',
-    desc: 'We have the right equipment to be efficient; and efficiency adds value. Big excavators, little excavators, track loaders, tractors, dozers, lasers and pumps.',
+    desc: 'From trench burners to specialized excavators, we are equipped to clear everything from a city lot to a 100 acre pasture conversion.',
   },
   {
     title: 'The Right Price',
@@ -24,7 +24,7 @@ const priorities = [
 const ourPriorities = [
   {
     label: 'Communication',
-    desc: 'We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. If that\'s not enough, we also have a calendar and a plan and we talk about it with our customers and our team. You\'ll love it.',
+    desc: "We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. If that's not enough, we also have a calendar and a plan and we talk about it with our customers and our team. You'll love it.",
   },
   {
     label: 'Quality',
@@ -36,15 +36,15 @@ const ourPriorities = [
   },
 ];
 
-export default function DirtWork() {
+export default function LandClearing() {
   return (
     <div className="pt-20">
       {/* Hero */}
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img
-            src="/dirtwork-hero.jpg"
-            alt="Dirt Work"
+            src="/land-clearing-hero.jpg"
+            alt="Land Clearing"
             className="w-full h-full object-cover"
           />
         </div>
@@ -55,17 +55,17 @@ export default function DirtWork() {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase mb-4">
-              <Tractor className="w-5 h-5" /> Professional Services
+              <Trees className="w-5 h-5" /> Professional Services
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Dirt Work</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Land Clearing</h1>
             <p className="text-xl text-gray-300 max-w-2xl">
-              Ponds, house pads, driveways, culvert installations and just about anything else that you can do with dirt.
+              Land clearing is our favorite service to provide and we are equipped to clear any size property. References available upon request.
             </p>
             <a
               href="tel:3184527653"
               className="mt-8 inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors"
             >
-              Inquire Now
+              Call Now
             </a>
           </motion.div>
         </div>
