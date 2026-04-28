@@ -1,40 +1,5 @@
 import { motion } from 'motion/react';
-import { Tractor, CheckCircle2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-const priorities = [
-  {
-    title: 'The Right People',
-    desc: 'We believe in our team and when you meet them, you will see why.',
-  },
-  {
-    title: 'The Right Motives',
-    desc: "We are motivated to enhance the value of every property we touch. When we leave your property, we want its value to have appreciated far beyond what you pay for our services.",
-  },
-  {
-    title: 'The Right Equipment',
-    desc: 'We have the right equipment to be efficient; and efficiency adds value. Big excavators, little excavators, track loaders, tractors, dozers, lasers and pumps.',
-  },
-  {
-    title: 'The Right Price',
-    desc: "We can't add value to your property if the work is overpriced. We want you to love our prices so much, that you're thinking of other ways we could add value to your property while we're there.",
-  },
-];
-
-const ourPriorities = [
-  {
-    label: 'Communication',
-    desc: 'We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. If that\'s not enough, we also have a calendar and a plan and we talk about it with our customers and our team. You\'ll love it.',
-  },
-  {
-    label: 'Quality',
-    desc: "It will never be our decision to sacrifice the quality of the work on your property. We want every customer to be so satisfied that you tell all of your friends how well the job was done.",
-  },
-  {
-    label: 'Value',
-    desc: 'Our goal is to enhance the value of every property we touch. For this to happen, we recognize that we must keep our people organized, our customers engaged and our overhead low.',
-  },
-];
+import { Tractor, ShieldCheck, CheckCircle2, Truck, MapPin } from 'lucide-react';
 
 export default function DirtWork() {
   return (
@@ -42,9 +7,9 @@ export default function DirtWork() {
       {/* Hero */}
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <img
-            src="/dirtwork-hero.jpg"
-            alt="Dirt Work"
+          <img 
+            src="/dirtwork-hero.jpg" 
+            alt="Dirt Work" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -57,99 +22,118 @@ export default function DirtWork() {
             <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase mb-4">
               <Tractor className="w-5 h-5" /> Professional Services
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Dirt Work</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Dirt Work & Land Clearing</h1>
             <p className="text-xl text-gray-300 max-w-2xl">
-              Ponds, house pads, driveways, culvert installations and just about anything else that you can do with dirt.
+              From initial site prep to final grading, our heavy equipment operators ensure your land is ready for development.
             </p>
-            <a
-              href="tel:3184527653"
-              className="mt-8 inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors"
-            >
-              Inquire Now
-            </a>
           </motion.div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Content */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4">Why Choose Upward Development?</h2>
-            <div className="w-20 h-1.5 bg-primary mx-auto" />
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {priorities.map((p, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-gray-50 border border-gray-100 rounded-sm p-6"
-              >
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="text-lg font-bold mb-2">{p.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
-              </motion.div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Quality From the Ground Up</h2>
+              <div className="w-16 h-1 bg-primary mb-8"></div>
+              <p className="text-lg text-gray-600 mb-8">
+                At Upward Development, we answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. We combine consistent communication and clear scheduling with a refusal to compromise on quality. Our goal is to maximize your property's value through organized project management and low overhead. Based in Lake Charles, we specialize in expert dirt work, ensuring every project—regardless of size—starts on a rock-solid foundation.
+              </p>
+              
+              <ul className="space-y-4">
+                {[
+                  { title: "Land Clearing & Debris Removal", desc: "Professional lot clearing for a clean start." },
+                  { title: "House Pads & Foundations", desc: "Precision-engineered bases for any structure." },
+                  { title: "Culvert Installations", desc: "Essential drainage and property access solutions." },
+                  { title: "Pond Digging & Shaping", desc: "Custom excavation for functional or decorative ponds." },
+                  { title: "Driveway Preparation", desc: "Proper sub-grade work for long-lasting stability." },
+                  { title: "Final Grading & Leveling", desc: "Expert contouring for optimal runoff and finishing." }
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-1" />
+                    <span className="text-gray-600"><strong className="text-gray-900">{item.title}:</strong> {item.desc}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="space-y-8">
+              <div className="overflow-hidden rounded-sm shadow-lg w-full h-64">
+                <img 
+                  src="/dirtwork-body.jpg" 
+                  alt="Excavator at work" 
+                  className="w-full h-full object-cover transform scale-[1.2] origin-top-right"
+                />
+              </div>
+              <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
+                <h3 className="text-xl font-bold mb-4">Ready to start your project?</h3>
+                <p className="text-gray-600 mb-6">Contact us today for a free estimate on your land clearing or dirt work needs.</p>
+                <a href="/#contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
+                  Get a Quote
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Our Priorities */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4">Our Priorities</h2>
-            <div className="w-20 h-1.5 bg-primary mx-auto" />
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {ourPriorities.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="border border-gray-700 rounded-sm p-8"
-              >
-                <div className="text-primary font-bold text-xl uppercase tracking-widest mb-3">{item.label}</div>
-                <p className="text-gray-300 leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+      {/* Delivered Dirt Section */}
+      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src="/dirtwork-hero.jpg" alt="Dirt Pit" className="w-full h-full object-cover" />
         </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-primary text-white text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Have Questions? Call or Text</h2>
-          <a href="tel:3184527653" className="text-2xl font-bold underline decoration-white/50 hover:decoration-white transition-all">
-            318-452-7653
-          </a>
-          <div className="mt-6">
-            <Link to="/contact" className="inline-block bg-white text-primary font-bold py-3 px-8 rounded-sm hover:bg-gray-100 transition-colors">
-              Click to Inquire Now
-            </Link>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7 }}
+            className="grid md:grid-cols-2 gap-16 items-center"
+          >
+            <div>
+              <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase mb-4">
+                <Truck className="w-5 h-5" /> Delivered to Your Door
+              </div>
+              <h2 className="text-4xl font-bold mb-6">Dirt Delivery Available</h2>
+              <div className="w-16 h-1 bg-primary mb-8"></div>
+              <p className="text-lg text-gray-300 mb-6">
+                Upward Development operates its own dirt pit located in <strong className="text-white">South Lake Charles, LA</strong>. That means we control the quality and availability of our fill dirt — and we can deliver it straight to your job site.
+              </p>
+              <p className="text-lg text-gray-300 mb-8">
+                Whether you need a few loads to level a yard or a large volume for a major site prep project, we have the equipment and the supply to get it done fast.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Premium fill dirt sourced from our own pit",
+                  "Delivery available throughout the Lake Charles area",
+                  "Ideal for house pads, yard leveling, and site prep",
+                  "Competitive pricing — no middle man"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href="/#contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
+                Get a Delivery Quote
+              </a>
+            </div>
+            <div className="bg-gray-800 border border-gray-700 rounded-sm p-10 text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <MapPin className="w-10 h-10 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Our Dirt Pit</h3>
+              <p className="text-primary font-bold text-lg mb-2">South Lake Charles, Louisiana</p>
+              <p className="text-gray-400 mb-8">
+                Owning our own supply means faster turnaround, consistent quality, and better pricing for our customers.
+              </p>
+              <a href="/#contact" className="inline-flex items-center gap-2 text-primary font-bold hover:text-white transition-colors">
+                <Truck className="w-5 h-5" /> Schedule a Delivery
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

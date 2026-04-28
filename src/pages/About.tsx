@@ -22,6 +22,13 @@ const teamMembers = [
     email: null,
     image: '/team-daniel.jpg',
   },
+  {
+    name: 'Ryan',
+    role: 'Team Member',
+    bio: 'A dedicated member of the Upward Development crew, bringing hard work and commitment to every project on the job site.',
+    email: null,
+    image: '/team-ryan.jpg',
+  },
 ];
 
 export default function About() {
@@ -65,12 +72,10 @@ export default function About() {
               
               <div className="space-y-6 text-lg text-gray-600">
                 <p>
-                  After many years in the real estate, timber, car wash and{' '}
-                  <a href="http://upwardoutdoor.com" className="text-primary underline" target="_blank" rel="noopener noreferrer">billboard business</a>,
-                  {' '}we started Upward Development in 2024 to obtain the licenses and insurance to construct our larger projects. We immediately found that our entire family loved the construction business, so we started doing a few projects for others. One thing led to another and now we are scaling upward to meet not only our needs, but also the construction needs of many others like you.
+                  Founded in 2024, Upward Development was born from a history in the real estate, timber, carwash, and billboard industries. What began as a strategic move to secure the licensing and insurance necessary for our own large-scale projects quickly evolved into a true family passion. We discovered a collective love for the building process, leading us to extend our expertise beyond our own portfolio to serve the needs of our community.
                 </p>
                 <p>
-                  Every one of our companies are built on a reliable team, quality work and reasonable prices. All of our work is pointed upward for the glory of God.
+                  Today, we are scaling rapidly to provide high-quality construction services for clients like you, driven by the same principles that have defined all our ventures: a reliable team, superior craftsmanship, and fair, transparent pricing. Most importantly, our mission transcends the job site; we approach every project with a commitment to excellence, ensuring all our work is pointed upward for the glory of God.
                 </p>
               </div>
             </motion.div>
@@ -118,7 +123,7 @@ export default function About() {
           </motion.div>
 
           {/* Team Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -170,9 +175,9 @@ export default function About() {
             className="grid md:grid-cols-3 gap-12 text-center"
           >
             {[
-              { stat: 'Communication', label: 'We Answer Every Call' },
-              { stat: 'Quality', label: 'Our Standard' },
-              { stat: 'Value', label: 'Our Promise' },
+              { stat: 'Faith', label: 'Our Foundation' },
+              { stat: 'Family', label: 'Our Strength' },
+              { stat: 'Excellence', label: 'Our Standard' },
             ].map((item, i) => (
               <div key={i}>
                 <div className="text-3xl md:text-4xl font-bold text-primary font-heading mb-2">{item.stat}</div>
