@@ -28,38 +28,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 2×2 GRID: story ───────────────────────────────────────── */}
-      {/* Row 1: Image top-left, Story text top-right */}
-      <div className="flex flex-col md:flex-row" style={{ minHeight: '400px' }}>
-        <div className="w-full md:w-1/2 overflow-hidden">
-          <img src={LUCAS_IMG} alt="Upward Development team" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
-        </div>
-        <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14">
-          <div>
-            <div className="w-10 h-0.5 bg-gray-800 mb-4" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Who We Are</h2>
-            <p className="text-gray-600 leading-relaxed">
-              Upward Development is the LaCour Family construction and development business based in Lake Charles, LA. After many years in the real estate, timber, car wash and billboard business, we started Upward Development in 2024 to obtain the licenses and insurance to construct our larger projects. We immediately found that our entire family loved the construction business, so we started doing a few projects for others. One thing led to another and now we are scaling upward to meet demand.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Row 2: Content bottom-left, Image bottom-right */}
-      <div className="flex flex-col md:flex-row" style={{ minHeight: '400px' }}>
-        <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14 md:order-1">
-          <div>
-            <div className="w-10 h-0.5 bg-gray-800 mb-4" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Who We Are</h2>
-            <p className="text-gray-600 leading-relaxed">
-              We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. We are motivated to enhance the value of every property we touch — when we leave, we want its value to have appreciated far beyond what you pay for our services.
-            </p>
-          </div>
-        </div>
-        <div className="w-full md:w-1/2 overflow-hidden md:order-2">
-          <img src={FAITH_IMG} alt="Upward Development at work" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
-        </div>
-      </div>
 
       {/* ── OUR STORY — thin centered strip ───────────────────────── */}
       <section className="py-10 bg-white border-t border-b border-gray-100">
@@ -71,6 +39,7 @@ export default function About() {
           </p>
         </div>
       </section>
+
 
       {/* ── TEAM ──────────────────────────────────────────────────── */}
       <section className="py-16 bg-gray-50">
