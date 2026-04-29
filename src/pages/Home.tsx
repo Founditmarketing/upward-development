@@ -107,12 +107,12 @@ export default function Home() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services/dirt-work"
+              <a
+                href="#services"
                 className="bg-primary hover:bg-primary-dark text-white px-10 py-4 font-bold text-sm tracking-widest uppercase transition-all shadow-lg shadow-primary/30 hover:-translate-y-0.5 flex items-center justify-center gap-2"
               >
                 View Services <ChevronRight className="w-4 h-4" />
-              </Link>
+              </a>
               <a
                 href="tel:3184527653"
                 className="border-2 border-white/40 hover:border-primary text-white px-10 py-4 font-bold text-sm tracking-widest uppercase transition-all hover:bg-white/10 flex items-center justify-center gap-2"

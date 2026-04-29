@@ -22,13 +22,6 @@ const teamMembers = [
     email: null,
     image: '/team-daniel.jpg',
   },
-  {
-    name: 'Ryan',
-    role: 'Team Member',
-    bio: 'A dedicated member of the Upward Development crew, bringing hard work and commitment to every project on the job site.',
-    email: null,
-    image: '/team-ryan.jpg',
-  },
 ];
 
 export default function About() {
@@ -123,7 +116,7 @@ export default function About() {
           </motion.div>
 
           {/* Team Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
