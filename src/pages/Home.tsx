@@ -5,7 +5,8 @@ const services = [
   {
     title: 'Dirt Work\n& Land Clearing',
     description: "We're licensed and insured to do it all and we love site work. Land clearing, culvert installations, ponds, house pads, debris removal and whatever else you may need on your property.",
-    image: '/dirtwork-hero.jpg',
+    // Same image the original Wix homepage uses for Dirt Work & Land Clearing
+    image: 'https://static.wixstatic.com/media/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg',
     links: [
       { label: 'Dirt Work', to: '/services/dirt-work' },
       { label: 'Land Clearing', to: '/services/land-clearing' },
@@ -14,7 +15,8 @@ const services = [
   {
     title: 'Steel Buildings',
     description: "We're licensed and insured to build everything from chicken coops to shopping centers.",
-    image: '/steel-body-2.jpg',
+    // Same image the original Wix homepage uses for Steel Buildings
+    image: 'https://static.wixstatic.com/media/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg',
     links: [
       { label: 'Steel Buildings', to: '/services/steel-buildings' },
     ],
@@ -22,7 +24,7 @@ const services = [
   {
     title: 'Super Homes',
     description: 'Commercial strength with residential beauty. Inspired by the effects of Hurricane Laura, these steel reinforced custom homes are built to withstand the toughest of storms.',
-    image: '/super-hero-2.jpg',
+    image: 'https://static.wixstatic.com/media/d3dc00_2317e1a3ceb64e33a8573d9269475538~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_2317e1a3ceb64e33a8573d9269475538~mv2.jpg',
     links: [
       { label: 'Super Homes', to: '/services/super-homes' },
     ],
@@ -30,7 +32,7 @@ const services = [
   {
     title: 'Real Estate Investments',
     description: 'We are always looking to invest in land and homes. Please contact us if you have any property that you would like to sell or that you think we should purchase.',
-    image: '/real-estate-body.jpg',
+    image: 'https://static.wixstatic.com/media/d3dc00_7471d23579b44c41a1063f8f39acd837~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_7471d23579b44c41a1063f8f39acd837~mv2.jpg',
     links: [
       { label: 'Investments', to: '/services/real-estate' },
     ],
@@ -87,7 +89,7 @@ export default function Home() {
           return (
             <div
               key={s.title}
-              className="flex flex-col md:flex-row items-center border-b border-gray-100 last:border-0"
+              className="flex flex-col md:flex-row items-center"
             >
               {/* Content side */}
               <div
