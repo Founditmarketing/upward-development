@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 
 const services = [
   {
-    title: 'Dirt Work & Land Clearing',
+    title: 'Dirt Work\n& Land Clearing',
     description: "We're licensed and insured to do it all and we love site work. Land clearing, culvert installations, ponds, house pads, debris removal and whatever else you may need on your property.",
+    image: '/dirtwork-hero.jpg',
     links: [
       { label: 'Dirt Work', to: '/services/dirt-work' },
       { label: 'Land Clearing', to: '/services/land-clearing' },
@@ -12,6 +14,7 @@ const services = [
   {
     title: 'Steel Buildings',
     description: "We're licensed and insured to build everything from chicken coops to shopping centers.",
+    image: '/steel-body-2.jpg',
     links: [
       { label: 'Steel Buildings', to: '/services/steel-buildings' },
     ],
@@ -19,6 +22,7 @@ const services = [
   {
     title: 'Super Homes',
     description: 'Commercial strength with residential beauty. Inspired by the effects of Hurricane Laura, these steel reinforced custom homes are built to withstand the toughest of storms.',
+    image: '/super-hero-2.jpg',
     links: [
       { label: 'Super Homes', to: '/services/super-homes' },
     ],
@@ -26,6 +30,7 @@ const services = [
   {
     title: 'Real Estate Investments',
     description: 'We are always looking to invest in land and homes. Please contact us if you have any property that you would like to sell or that you think we should purchase.',
+    image: '/real-estate-body.jpg',
     links: [
       { label: 'Investments', to: '/services/real-estate' },
     ],
@@ -74,29 +79,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SERVICES ─────────────────────────────────────────────────── */}
-      <section id="services" className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((s) => (
-              <div key={s.title} className="p-8 border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{s.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{s.description}</p>
+      {/* ── SERVICES — Z-PATTERN ─────────────────────────────────────── */}
+      <section id="services" className="bg-white">
+        {services.map((s, i) => {
+          const isEven = i % 2 === 1; // even index = image left, text right
+          const lines = s.title.split('\n');
+          return (
+            <div
+              key={s.title}
+              className="flex flex-col md:flex-row items-center"
+              style={{ minHeight: '360px' }}
+            >
+              {/* Content side */}
+              <div
+                className={`w-full md:w-1/2 px-10 lg:px-16 py-14 flex flex-col justify-center ${
+                  isEven ? 'md:order-2' : 'md:order-1'
+                }`}
+              >
+                {/* Decorative rule above title — matching Wix */}
+                <div className="w-10 h-0.5 bg-gray-800 mb-4" />
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                  {lines.map((line, j) => (
+                    <span key={j}>
+                      {line}
+                      {j < lines.length - 1 && <br />}
+                    </span>
+                  ))}
+                </h2>
+                <p className="text-gray-600 leading-relaxed mb-8 max-w-sm">
+                  {s.description}
+                </p>
                 <div className="flex flex-wrap gap-3">
                   {s.links.map((l) => (
                     <Link
                       key={l.to}
                       to={l.to}
-                      className="bg-primary hover:bg-primary-dark text-black font-bold px-5 py-2 text-sm tracking-wide uppercase transition-colors"
+                      className="inline-flex items-center gap-1 bg-primary hover:bg-primary-dark text-black font-bold px-5 py-2.5 text-sm tracking-wide uppercase transition-colors"
                     >
-                      {l.label}
+                      {l.label} <ChevronRight className="w-4 h-4" />
                     </Link>
                   ))}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+
+              {/* Image side */}
+              <div
+                className={`w-full md:w-1/2 ${isEven ? 'md:order-1' : 'md:order-2'}`}
+                style={{ minHeight: '320px' }}
+              >
+                <img
+                  src={s.image}
+                  alt={s.title.replace('\n', ' ')}
+                  className="w-full h-full object-cover"
+                  style={{ minHeight: '320px', maxHeight: '420px' }}
+                />
+              </div>
+            </div>
+          );
+        })}
       </section>
 
       {/* ── CTA STRIP ────────────────────────────────────────────────── */}
