@@ -1,193 +1,149 @@
-import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 
-const teamMembers = [
-  {
-    name: 'Lucas LaCour',
-    role: 'Owner / Operator',
-    bio: 'Founder of Upward Development with deep roots in real estate, timber, car wash, and billboard industries. Lucas leads every project with a commitment to quality, integrity, and faith.',
-    email: 'lucas@upwarddevelopment.us',
-    image: '/team-lucas.jpg',
-  },
-  {
-    name: 'Faith LaCour',
-    role: 'Operations Coordinator',
-    bio: 'Faith keeps the business running smoothly behind the scenes — managing communications, scheduling, and client relations to ensure every project goes off without a hitch.',
-    email: 'faith@upwardedevelopment.us',
-    image: '/team-faith.jpg',
-  },
-  {
-    name: 'Daniel LaCour',
-    role: 'Lead Operator',
-    bio: 'Daniel is the boots-on-the-ground force of Upward Development. From land clearing to steel erection, he brings skill, hustle, and precision to every job site.',
-    email: null,
-    image: '/team-daniel.jpg',
-  },
-  {
-    name: 'Ryan',
-    role: 'Team Member',
-    bio: 'A dedicated member of the Upward Development crew, bringing hard work and commitment to every project on the job site.',
-    email: null,
-    image: '/team-ryan.jpg',
-  },
+const B = 'https://static.wixstatic.com/media';
+
+// Team photos scraped from live Wix About Us page (in order of appearance)
+const LUCAS_IMG  = `${B}/d3dc00_f8f91136766745a59c8140d3d4a47a05~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_f8f91136766745a59c8140d3d4a47a05~mv2.jpg`;
+const FAITH_IMG  = `${B}/d3dc00_9daaf512b3f2459face2d7cf02402856~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_9daaf512b3f2459face2d7cf02402856~mv2.jpg`;
+const DANIEL_IMG = `${B}/d3dc00_1a5a680472dd42c5b3e305597dc65be6~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_1a5a680472dd42c5b3e305597dc65be6~mv2.jpg`;
+
+const reviews = [
+  { name: 'Kimberly Liles', text: 'Lucas and his crew did an outstanding job clearing our lot and installing a culvert. They were on time, professional, and the price was more than fair. Will definitely use them again!', stars: 5 },
+  { name: 'Jordan Broussard', text: 'Had them build a steel shop on our property. From start to finish the communication was great and the quality of the work exceeded my expectations. Highly recommend Upward Development.', stars: 5 },
+  { name: 'Tammy Fontenot', text: 'Great company to work with. They showed up when they said they would and did exactly what they promised. Refreshing to find a contractor that actually answers their phone!', stars: 5 },
 ];
 
 export default function About() {
   return (
-    <div className="pt-20">
-      {/* Hero */}
-      <section className="relative py-24 bg-black text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <img 
-            src="/about-hero.jpg" 
-            alt="About Us" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">About Us</h1>
-            <p className="text-xl text-gray-300 max-w-2xl">
-              The LaCour Family Story. Built on a foundation of faith, family, and commercial-grade strength.
-            </p>
-          </motion.div>
+    <div className="pt-[70px]">
+
+      {/* ── HERO ──────────────────────────────────────────────────── */}
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '60vh' }}>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/about-hero.jpg')" }} />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 text-center px-6 py-20">
+          <h1 className="text-5xl sm:text-7xl font-bold text-white drop-shadow-lg mb-4">ABOUT US</h1>
+          <p className="text-xl text-white/90">The LaCour Family — Lake Charles, LA</p>
         </div>
       </section>
 
-      {/* Who We Are */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            >
-              <h2 className="text-4xl font-bold mb-6">Who We Are</h2>
-              <div className="w-20 h-1.5 bg-primary mb-8"></div>
-              
-              <div className="space-y-6 text-lg text-gray-600">
-                <p>
-                  Founded in 2024, Upward Development was born from a history in the real estate, timber, carwash, and billboard industries. What began as a strategic move to secure the licensing and insurance necessary for our own large-scale projects quickly evolved into a true family passion. We discovered a collective love for the building process, leading us to extend our expertise beyond our own portfolio to serve the needs of our community.
-                </p>
-                <p>
-                  Today, we are scaling rapidly to provide high-quality construction services for clients like you, driven by the same principles that have defined all our ventures: a reliable team, superior craftsmanship, and fair, transparent pricing. Most importantly, our mission transcends the job site; we approach every project with a commitment to excellence, ensuring all our work is pointed upward for the glory of God.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-              className="relative"
-            >
-              <div className="bg-gray-200 rounded-sm overflow-hidden relative">
-                <img 
-                  src="/about-body.jpg" 
-                  alt="About Upward Development" 
-                  className="w-full h-auto transform scale-[1.15] origin-bottom-right grayscale hover:grayscale-0 transition-all duration-500"
-                />
-                <div className="absolute inset-0 border-8 border-primary/20 pointer-events-none"></div>
-              </div>
-              <div className="absolute -bottom-8 -left-8 bg-primary text-white p-8 rounded-sm shadow-xl hidden md:block">
-                <div className="text-4xl font-bold font-heading mb-1">100%</div>
-                <div className="text-sm font-bold uppercase tracking-wider">Family Owned</div>
-              </div>
-            </motion.div>
+      {/* ── 2×2 GRID: story ───────────────────────────────────────── */}
+      {/* Row 1: Image top-left, Story text top-right */}
+      <div className="flex flex-col md:flex-row" style={{ minHeight: '400px' }}>
+        <div className="w-full md:w-1/2 overflow-hidden">
+          <img src={LUCAS_IMG} alt="Upward Development team" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
+        </div>
+        <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14">
+          <div>
+            <div className="w-10 h-0.5 bg-gray-800 mb-4" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Who We Are</h2>
+            <p className="text-gray-600 leading-relaxed">
+              Upward Development is the LaCour Family construction and development business based in Lake Charles, LA. After many years in the real estate, timber, car wash and billboard business, we started Upward Development in 2024 to obtain the licenses and insurance to construct our larger projects. We immediately found that our entire family loved the construction business, so we started doing a few projects for others. One thing led to another and now we are scaling upward to meet demand.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Our Team */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Team</h2>
-            <div className="w-20 h-1.5 bg-primary mx-auto mb-6"></div>
-            <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-              Every project is personal. Meet the family behind the work.
+      {/* Row 2: Content bottom-left, Image bottom-right */}
+      <div className="flex flex-col md:flex-row" style={{ minHeight: '400px' }}>
+        <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14 md:order-1">
+          <div>
+            <div className="w-10 h-0.5 bg-gray-800 mb-4" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              <strong>Communication.</strong> We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry.
             </p>
-          </motion.div>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              <strong>Quality.</strong> It will never be our decision to sacrifice the quality of the work on your property. We want every customer to be so satisfied that you tell all of your friends how well the job was done.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              <strong>Value.</strong> Our goal is to enhance the value of every property we touch. We can't add value to your property if the work is overpriced. We want you to love our prices.
+            </p>
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 overflow-hidden md:order-2">
+          <img src={FAITH_IMG} alt="Upward Development at work" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
+        </div>
+      </div>
 
-          {/* Team Grid */}
+      {/* ── TEAM ──────────────────────────────────────────────────── */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="w-10 h-0.5 bg-gray-800 mb-4" />
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">Meet the Team</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-                className="group flex flex-col"
-              >
-                {/* Photo */}
-                <div className="relative overflow-hidden rounded-sm bg-gray-900 mb-5 aspect-square">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                  />
-                  {/* Bottom accent bar */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                </div>
 
-                {/* Info */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">{member.role}</div>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-3">{member.bio}</p>
-                  {member.email && (
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="text-xs text-primary hover:underline"
-                    >
-                      {member.email}
-                    </a>
-                  )}
+            <div className="flex flex-col">
+              <div className="overflow-hidden mb-4" style={{ aspectRatio: '1' }}>
+                <img src={LUCAS_IMG} alt="Lucas LaCour" className="w-full h-full object-cover object-top" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">Lucas LaCour</h3>
+              <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">Owner / Operator</p>
+              <a href="mailto:lucas@upwarddevelopment.us" className="text-xs text-gray-500 hover:text-primary">lucas@upwarddevelopment.us</a>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="overflow-hidden mb-4" style={{ aspectRatio: '1' }}>
+                <img src={FAITH_IMG} alt="Faith LaCour" className="w-full h-full object-cover object-top" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">Faith LaCour</h3>
+              <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">Operations Coordinator</p>
+              <a href="mailto:faith@upwardedevelopment.us" className="text-xs text-gray-500 hover:text-primary">faith@upwardedevelopment.us</a>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="overflow-hidden mb-4" style={{ aspectRatio: '1' }}>
+                <img src={DANIEL_IMG} alt="Daniel LaCour" className="w-full h-full object-cover object-top" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">Daniel LaCour</h3>
+              <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">Lead Operator</p>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="overflow-hidden mb-4" style={{ aspectRatio: '1' }}>
+                <img src="/team-ryan.jpg" alt="Ryan" className="w-full h-full object-cover object-top" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">Ryan</h3>
+              <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">Team Member</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── REVIEWS ───────────────────────────────────────────────── */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="w-10 h-0.5 bg-gray-800 mb-4" />
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">What our customers think...</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {reviews.map((r, i) => (
+              <div key={i} className="border border-gray-100 p-6">
+                <div className="flex mb-3">
+                  {Array.from({ length: r.stars }).map((_, s) => (
+                    <span key={s} className="text-primary text-lg">★</span>
+                  ))}
                 </div>
-              </motion.div>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">"{r.text}"</p>
+                <p className="text-gray-900 font-bold text-sm">— {r.name}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Values Banner */}
-      <section className="py-16 bg-black text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-3 gap-12 text-center"
-          >
-            {[
-              { stat: 'Faith', label: 'Our Foundation' },
-              { stat: 'Family', label: 'Our Strength' },
-              { stat: 'Excellence', label: 'Our Standard' },
-            ].map((item, i) => (
-              <div key={i}>
-                <div className="text-3xl md:text-4xl font-bold text-primary font-heading mb-2">{item.stat}</div>
-                <div className="text-gray-400 uppercase tracking-widest text-sm font-semibold">{item.label}</div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
+      {/* ── CTA STRIP ─────────────────────────────────────────────── */}
+      <section className="py-12 bg-gray-50 text-center border-t border-gray-200">
+        <p className="text-lg text-gray-700 mb-4 font-medium">
+          Have Questions? &nbsp; Call or text &nbsp;
+          <a href="tel:3184527653" className="text-primary font-bold hover:underline">318-452-7653</a>
+        </p>
+        <Link to="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-black font-bold px-8 py-3 text-sm tracking-widest uppercase transition-colors">
+          Click to Inquire Now <ChevronRight className="w-4 h-4" />
+        </Link>
       </section>
+
     </div>
   );
 }
-
