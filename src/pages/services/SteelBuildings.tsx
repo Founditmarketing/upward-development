@@ -1,139 +1,71 @@
-import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Phone, ChevronRight } from 'lucide-react';
+import { ChevronRight, Phone } from 'lucide-react';
 
-const HERO_BG   = 'https://static.wixstatic.com/media/d3dc00_4f686de3c5a8454c87b8126ee573bfb2~mv2.jpg/v1/fill/w_1920,h_800,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_4f686de3c5a8454c87b8126ee573bfb2~mv2.jpg';
-const BODY_IMG1 = 'https://static.wixstatic.com/media/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg';
-const BODY_IMG2 = 'https://static.wixstatic.com/media/d3dc00_8fc72a6dc3d441db9a206e6ae78176d0~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_8fc72a6dc3d441db9a206e6ae78176d0~mv2.jpg';
+const B = 'https://static.wixstatic.com/media';
 
-const pillars = [
-  {
-    label: 'The Right People',
-    body: 'We believe in our team and when you meet them, you will see why.',
-  },
-  {
-    label: 'The Right Motives',
-    body: "We are motivated to enhance the value of every property we touch. When we leave your property, we want it's value to have appreciated far beyond what you pay for our services.",
-  },
-  {
-    label: 'The Right Equipment',
-    body: 'We have the right equipment to be efficient; and efficiency adds value. Big excavators, little excavators, track loaders, tractors, dozers, lasers and pumps.',
-  },
-  {
-    label: 'The Right Price',
-    body: "We can't add value to your property if the work is overpriced. We want you to love our prices so much, that you're thinking of other ways we could add value to your property while we're there.",
-  },
-];
+// Steel Buildings has no video hero — uses static image hero (first image found on page)
+const HERO  = `${B}/d3dc00_4f686de3c5a8454c87b8126ee573bfb2~mv2.jpg/v1/fill/w_1920,h_800,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_4f686de3c5a8454c87b8126ee573bfb2~mv2.jpg`;
+const IMG1  = `${B}/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg`;
+const IMG2  = `${B}/d3dc00_8fc72a6dc3d441db9a206e6ae78176d0~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_8fc72a6dc3d441db9a206e6ae78176d0~mv2.jpg`;
 
 export default function SteelBuildings() {
   return (
-    <div>
-      {/* ── HERO ─────────────────────────────────────────────────────── */}
-      <section
-        className="relative min-h-[60vh] flex items-center justify-center text-center text-white overflow-hidden"
-        style={{ paddingTop: '80px' }}
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${HERO_BG}')` }}
-        />
-        <div className="absolute inset-0 bg-black/55" />
+    <div className="pt-[70px]">
 
-        <motion.div
-          className="relative z-10 max-w-3xl mx-auto px-6 py-24"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <h1 className="text-6xl md:text-7xl font-bold tracking-wide mb-6">STEEL BUILDINGS</h1>
-          <p className="text-xl text-gray-200 mb-4 max-w-xl mx-auto">
-            We're licensed, trained and equipped to build engineered steel buildings.
+      {/* ── IMAGE HERO (no video on Steel Buildings page) ──────────── */}
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '70vh' }}>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${HERO}')` }} />
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="relative z-10 text-center px-6 py-20">
+          <h1 className="text-5xl sm:text-7xl font-bold text-white drop-shadow-lg mb-4">STEEL BUILDINGS</h1>
+          <p className="text-xl text-white/90 mb-8">From chicken coops to shopping centers.</p>
+          <a href="tel:3184527653" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-black font-bold px-10 py-4 text-sm tracking-widest uppercase transition-colors">
+            <Phone className="w-4 h-4" /> Send Me Info!
+          </a>
+        </div>
+      </section>
+
+      {/* ── BODY — Z-PATTERN ──────────────────────────────────────── */}
+      <section className="flex flex-col md:flex-row items-center bg-white">
+        <div className="w-full md:w-1/2 px-10 lg:px-16 py-14">
+          <div className="w-10 h-0.5 bg-gray-800 mb-4" />
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Built to Last</h2>
+          <p className="text-gray-600 leading-relaxed">
+            We're licensed and insured to build everything from chicken coops to shopping centers. Our steel buildings are engineered for durability, weather resistance, and long-term value. Whether you need a shop, a warehouse, a barn, or a commercial structure, we can build it right.
           </p>
-          <p className="text-lg text-gray-300 mb-10 max-w-xl mx-auto">
-            From backyard workshops to commercial facilities, we can build what you want. All of our buildings are wood-free and designed to withstand the fiercest storms. We can build all-welded or boltup buildings.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:3184527653"
-              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-10 py-4 uppercase tracking-widest text-sm transition-all hover:-translate-y-0.5 shadow-lg shadow-primary/30"
-            >
-              <Phone className="w-4 h-4" /> Send Me Info!
-            </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/50 hover:border-primary text-white font-bold px-10 py-4 uppercase tracking-widest text-sm transition-all hover:bg-white/10"
-            >
-              I Want One!
-            </Link>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* ── 4 PILLARS ────────────────────────────────────────────────── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {pillars.map((p, i) => (
-              <motion.div
-                key={p.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-primary font-bold text-2xl">{i + 1}</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{p.label}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{p.body}</p>
-              </motion.div>
-            ))}
-          </div>
+        </div>
+        <div className="w-full md:w-1/2 p-8">
+          <img src={IMG1} alt="Steel building construction" className="w-full object-cover shadow-sm" style={{ maxHeight: '320px' }} />
         </div>
       </section>
 
-      {/* ── PHOTO GALLERY ROW ────────────────────────────────────────── */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-4">
-            {[BODY_IMG1, BODY_IMG2].map((src, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.96 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="aspect-video overflow-hidden shadow-md"
-              >
-                <img
-                  src={src}
-                  alt={`Steel Building project ${i + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                />
-              </motion.div>
-            ))}
-          </div>
+      <section className="flex flex-col md:flex-row items-center bg-gray-50">
+        <div className="w-full md:w-1/2 p-8 md:order-1">
+          <img src={IMG2} alt="Completed steel building" className="w-full object-cover shadow-sm" style={{ maxHeight: '320px' }} />
+        </div>
+        <div className="w-full md:w-1/2 px-10 lg:px-16 py-14 md:order-2">
+          <div className="w-10 h-0.5 bg-gray-800 mb-4" />
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">What We Build</h2>
+          <ul className="text-gray-600 leading-relaxed space-y-2">
+            <li>• Residential &amp; Agricultural Shops</li>
+            <li>• Barns &amp; Storage Buildings</li>
+            <li>• Commercial Warehouses</li>
+            <li>• Church &amp; Community Buildings</li>
+            <li>• Retail &amp; Office Structures</li>
+            <li>• Custom Sizes &amp; Configurations</li>
+          </ul>
         </div>
       </section>
 
-      {/* ── FOOTER CTA STRIP ─────────────────────────────────────────── */}
-      <section className="bg-black text-white py-14 text-center">
-        <p className="text-lg font-medium text-gray-300 mb-4">Have Questions? Call or text</p>
-        <a
-          href="tel:3184527653"
-          className="text-3xl font-bold text-primary hover:text-white transition-colors"
-        >
-          318-452-7653
-        </a>
-        <div className="mt-6">
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 font-bold uppercase tracking-widest text-sm transition-all"
-          >
-            Click to Inquire Now <ChevronRight className="w-4 h-4" />
-          </Link>
-        </div>
+      {/* ── CTA STRIP ─────────────────────────────────────────────── */}
+      <section className="py-12 bg-gray-50 text-center border-t border-gray-200">
+        <p className="text-lg text-gray-700 mb-4 font-medium">
+          Have Questions? &nbsp; Call or text &nbsp;
+          <a href="tel:3184527653" className="text-primary font-bold hover:underline">318-452-7653</a>
+        </p>
+        <Link to="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-black font-bold px-8 py-3 text-sm tracking-widest uppercase transition-colors">
+          Click to Inquire Now <ChevronRight className="w-4 h-4" />
+        </Link>
       </section>
     </div>
   );
