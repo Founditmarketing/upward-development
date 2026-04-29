@@ -67,8 +67,8 @@ export default function Home() {
   return (
     <main>
       {/* ── HERO ─────────────────────────────────────────────────────── */}
-      <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background */}
+      <section id="home" className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '80vh' }}>
+        {/* Background — drone video / photo, very light overlay like the Wix original */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video
             src="/drone-hero.mp4"
@@ -76,61 +76,46 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover scale-[1.05] pointer-events-none"
+            className="w-full h-full object-cover pointer-events-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/50" />
+          {/* Subtle overlay — just enough to make text readable, not a heavy dark blanket */}
+          <div className="absolute inset-0 bg-black/25" />
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 relative z-10 py-32 lg:py-48 text-center">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-12 py-32 lg:py-48 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: 'easeOut' }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            {/* Eyebrow */}
-            <p className="text-primary font-bold tracking-[0.22em] uppercase text-sm mb-6 flex items-center justify-center gap-3">
-              <span className="inline-block w-10 h-px bg-primary" />
-              Lake Charles, LA · Licensed &amp; Insured
-              <span className="inline-block w-10 h-px bg-primary" />
-            </p>
-
-            {/* H1 — verbatim OG tagline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.08] mb-6">
+            {/* H1 — massive, bold, all-white, matching original */}
+            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
               Here to Enhance the<br />
-              <span className="text-primary">Value of Your Property</span>
+              Value of Your Property
             </h1>
 
-            {/* Sub */}
-            <p className="text-xl text-gray-300 mb-12 max-w-xl mx-auto leading-relaxed">
+            {/* Subtitle */}
+            <p className="text-xl sm:text-2xl text-white mb-12 drop-shadow-md font-medium">
               A construction and development company.
             </p>
 
-            {/* CTAs */}
+            {/* CTAs — two solid cyan buttons like the original */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#services"
-                className="bg-primary hover:bg-primary-dark text-white px-10 py-4 font-bold text-sm tracking-widest uppercase transition-all shadow-lg shadow-primary/30 hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                className="bg-primary hover:bg-primary-dark text-black font-bold px-10 py-4 text-sm tracking-widest uppercase transition-all hover:-translate-y-0.5 shadow-lg"
               >
-                View Services <ChevronRight className="w-4 h-4" />
+                View Services
               </a>
-              <a
-                href="tel:3184527653"
-                className="border-2 border-white/40 hover:border-primary text-white px-10 py-4 font-bold text-sm tracking-widest uppercase transition-all hover:bg-white/10 flex items-center justify-center gap-2"
+              <Link
+                to="/contact"
+                className="bg-primary hover:bg-primary-dark text-black font-bold px-10 py-4 text-sm tracking-widest uppercase transition-all hover:-translate-y-0.5 shadow-lg"
               >
-                <Phone className="w-4 h-4" /> 318-452-7653
-              </a>
+                Contact Us
+              </Link>
             </div>
           </motion.div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-        >
-          <div className="w-px h-10 bg-gradient-to-b from-white/0 to-white/40" />
-        </motion.div>
       </section>
 
       {/* ── SERVICES ─────────────────────────────────────────────────── */}
