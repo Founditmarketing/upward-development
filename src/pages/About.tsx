@@ -50,15 +50,9 @@ export default function About() {
         <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14 md:order-1">
           <div>
             <div className="w-10 h-0.5 bg-gray-800 mb-4" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              <strong>Communication.</strong> We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              <strong>Quality.</strong> It will never be our decision to sacrifice the quality of the work on your property. We want every customer to be so satisfied that you tell all of your friends how well the job was done.
-            </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Who We Are</h2>
             <p className="text-gray-600 leading-relaxed">
-              <strong>Value.</strong> Our goal is to enhance the value of every property we touch. We can't add value to your property if the work is overpriced. We want you to love our prices.
+              We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. We are motivated to enhance the value of every property we touch — when we leave, we want its value to have appreciated far beyond what you pay for our services.
             </p>
           </div>
         </div>
@@ -66,6 +60,17 @@ export default function About() {
           <img src={FAITH_IMG} alt="Upward Development at work" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
         </div>
       </div>
+
+      {/* ── OUR STORY — thin centered strip ───────────────────────── */}
+      <section className="py-10 bg-white border-t border-b border-gray-100">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+          <div className="w-10 h-0.5 bg-gray-800 mb-4 mx-auto" />
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Story</h2>
+          <p className="text-gray-600 leading-relaxed">
+            After many years in the real estate, timber, car wash and billboard business, we started Upward Development in 2024 to obtain the licenses and insurance to construct our larger projects. We immediately found that our entire family loved the construction business, so we started doing a few projects for others. One thing led to another and now we are scaling upward to meet not only our needs, but also the construction needs of many others like you. Every one of our companies are built on a reliable team, quality work and reasonable prices. All of our work is pointed upward for the glory of God.
+          </p>
+        </div>
+      </section>
 
       {/* ── TEAM ──────────────────────────────────────────────────── */}
       <section className="py-16 bg-gray-50">
