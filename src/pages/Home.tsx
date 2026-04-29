@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 
+const BASE = 'https://static.wixstatic.com/media';
+
 const services = [
   {
     title: 'Dirt Work\n& Land Clearing',
     description: "We're licensed and insured to do it all and we love site work. Land clearing, culvert installations, ponds, house pads, debris removal and whatever else you may need on your property.",
-    // Same image the original Wix homepage uses for Dirt Work & Land Clearing
-    image: 'https://static.wixstatic.com/media/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg',
+    // Position 1 on original homepage (confirmed from live HTML)
+    image: `${BASE}/ca516a_3a53b56c1bf546f088877163fede7384~mv2.jpg/v1/fill/w_1066,h_592,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ca516a_3a53b56c1bf546f088877163fede7384~mv2.jpg`,
     links: [
       { label: 'Dirt Work', to: '/services/dirt-work' },
       { label: 'Land Clearing', to: '/services/land-clearing' },
@@ -15,8 +17,8 @@ const services = [
   {
     title: 'Steel Buildings',
     description: "We're licensed and insured to build everything from chicken coops to shopping centers.",
-    // Same image the original Wix homepage uses for Steel Buildings
-    image: 'https://static.wixstatic.com/media/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg',
+    // Position 2 on original homepage
+    image: `${BASE}/ca516a_90f85b30ad75470facb0b41d80f8109c~mv2.jpg/v1/crop/x_186,y_0,w_2814,h_1447/fill/w_1098,h_564,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ca516a_90f85b30ad75470facb0b41d80f8109c~mv2.jpg`,
     links: [
       { label: 'Steel Buildings', to: '/services/steel-buildings' },
     ],
@@ -24,7 +26,8 @@ const services = [
   {
     title: 'Super Homes',
     description: 'Commercial strength with residential beauty. Inspired by the effects of Hurricane Laura, these steel reinforced custom homes are built to withstand the toughest of storms.',
-    image: 'https://static.wixstatic.com/media/d3dc00_2317e1a3ceb64e33a8573d9269475538~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_2317e1a3ceb64e33a8573d9269475538~mv2.jpg',
+    // Position 3 on original homepage
+    image: `${BASE}/ca516a_c66c40d9303e4795b603b1cf1985c268~mv2.jpg/v1/crop/x_42,y_70,w_982,h_541/fill/w_980,h_540,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ca516a_c66c40d9303e4795b603b1cf1985c268~mv2.jpg`,
     links: [
       { label: 'Super Homes', to: '/services/super-homes' },
     ],
@@ -32,7 +35,8 @@ const services = [
   {
     title: 'Real Estate Investments',
     description: 'We are always looking to invest in land and homes. Please contact us if you have any property that you would like to sell or that you think we should purchase.',
-    image: 'https://static.wixstatic.com/media/d3dc00_7471d23579b44c41a1063f8f39acd837~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_7471d23579b44c41a1063f8f39acd837~mv2.jpg',
+    // Position 4 on original homepage
+    image: `${BASE}/ca516a_cd8952dcbee64fc58662c25582c00392~mv2.jpg/v1/fill/w_1082,h_540,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ca516a_cd8952dcbee64fc58662c25582c00392~mv2.jpg`,
     links: [
       { label: 'Investments', to: '/services/real-estate' },
     ],
