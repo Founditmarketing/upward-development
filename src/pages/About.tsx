@@ -29,12 +29,18 @@ export default function About() {
       </section>
 
 
-      {/* ── OUR STORY — thin centered strip ───────────────────────── */}
-      <section className="py-10 bg-white border-t border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <div className="w-10 h-0.5 bg-gray-800 mb-4 mx-auto" />
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Story</h2>
-          <p className="text-gray-600 leading-relaxed">
+      {/* ── OUR STORY — 2-column: cyan heading left, text right ──── */}
+      <section className="flex flex-col md:flex-row">
+        <div className="w-full md:w-2/5 bg-primary flex items-center px-10 lg:px-14 py-14">
+          <div>
+            <h2 className="text-4xl font-bold text-black leading-tight mb-4">
+              Our<br />Story
+            </h2>
+            <div className="w-8 h-0.5 bg-black/40" />
+          </div>
+        </div>
+        <div className="w-full md:w-3/5 bg-white flex items-center px-10 lg:px-14 py-14">
+          <p className="text-gray-700 leading-relaxed">
             After many years in the real estate, timber, car wash and billboard business, we started Upward Development in 2024 to obtain the licenses and insurance to construct our larger projects. We immediately found that our entire family loved the construction business, so we started doing a few projects for others. One thing led to another and now we are scaling upward to meet not only our needs, but also the construction needs of many others like you. Every one of our companies are built on a reliable team, quality work and reasonable prices. All of our work is pointed upward for the glory of God.
           </p>
         </div>
