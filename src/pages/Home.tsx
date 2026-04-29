@@ -27,7 +27,7 @@ const services = [
     title: 'Super Homes',
     description: 'Commercial strength with residential beauty. Inspired by the effects of Hurricane Laura, these steel reinforced custom homes are built to withstand the toughest of storms.',
     // Position 3 on original homepage
-    image: `${BASE}/ca516a_c66c40d9303e4795b603b1cf1985c268~mv2.jpg/v1/crop/x_42,y_70,w_982,h_541/fill/w_980,h_540,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ca516a_c66c40d9303e4795b603b1cf1985c268~mv2.jpg`,
+    image: `${BASE}/ca516a_cd8952dcbee64fc58662c25582c00392~mv2.jpg/v1/fill/w_1082,h_540,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ca516a_cd8952dcbee64fc58662c25582c00392~mv2.jpg`,
     links: [
       { label: 'Super Homes', to: '/services/super-homes' },
     ],
@@ -36,7 +36,7 @@ const services = [
     title: 'Real Estate Investments',
     description: 'We are always looking to invest in land and homes. Please contact us if you have any property that you would like to sell or that you think we should purchase.',
     // Position 4 on original homepage
-    image: `${BASE}/ca516a_cd8952dcbee64fc58662c25582c00392~mv2.jpg/v1/fill/w_1082,h_540,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ca516a_cd8952dcbee64fc58662c25582c00392~mv2.jpg`,
+    image: `${BASE}/ca516a_c66c40d9303e4795b603b1cf1985c268~mv2.jpg/v1/crop/x_42,y_70,w_982,h_541/fill/w_980,h_540,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ca516a_c66c40d9303e4795b603b1cf1985c268~mv2.jpg`,
     links: [
       { label: 'Investments', to: '/services/real-estate' },
     ],
