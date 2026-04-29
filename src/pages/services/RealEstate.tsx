@@ -9,7 +9,6 @@ export default function RealEstate() {
   return (
     <div className="pt-[70px]">
 
-      {/* ── VIDEO HERO ─────────────────────────────────────────────── */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '70vh' }}>
         <video src="/realestate-hero.mp4" autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
@@ -22,37 +21,36 @@ export default function RealEstate() {
         </div>
       </section>
 
-      {/* ── TWO IMAGES — full width, side by side, no padding ─────── */}
-      <div className="flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2">
-          <img src={IMG1} alt="Real estate property" className="w-full h-full object-cover" style={{ minHeight: '300px', maxHeight: '420px' }} />
+      {/* Row 1: Image top-left, Content top-right */}
+      <div className="flex flex-col md:flex-row" style={{ minHeight: '400px' }}>
+        <div className="w-full md:w-1/2 overflow-hidden">
+          <img src={IMG1} alt="Real estate property" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
         </div>
-        <div className="w-full md:w-1/2">
-          <img src={IMG2} alt="Investment property" className="w-full h-full object-cover" style={{ minHeight: '300px', maxHeight: '420px' }} />
+        <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">We Buy Homes in Any Condition</h2>
+            <p className="text-gray-600 leading-relaxed">
+              We've been in the real estate business for more than 25 years and we are currently looking for acquisition opportunities. We buy homes in any condition and turn them into this. Please contact us if you have any property that you would like to sell or that you think we should purchase.
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* ── WHITE CONTENT SECTION ─────────────────────────────────── */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">We Buy Homes in Any Condition</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                We've been in the real estate business for more than 25 years and we are currently looking for acquisition opportunities. We buy homes in any condition and turn them into something great. Please contact us if you have any property that you would like to sell or that you think we should purchase.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">We Invest in Income Producing Properties</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                We love income producing properties as well. We've bought and built single-family rentals, RV parks and short-term rentals and we're looking for more.
-              </p>
-            </div>
+      {/* Row 2: Content bottom-left, Image bottom-right */}
+      <div className="flex flex-col md:flex-row" style={{ minHeight: '400px' }}>
+        <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14 md:order-1">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">We Invest in Income Producing Properties</h2>
+            <p className="text-gray-600 leading-relaxed">
+              We love income producing properties as well. We've bought and built single-family rentals, RV parks and short-term rentals and we're looking for more.
+            </p>
           </div>
         </div>
-      </section>
+        <div className="w-full md:w-1/2 overflow-hidden md:order-2">
+          <img src={IMG2} alt="Investment property" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
+        </div>
+      </div>
 
-      {/* ── CTA STRIP ─────────────────────────────────────────────── */}
       <section className="py-12 bg-gray-50 text-center border-t border-gray-200">
         <p className="text-lg text-gray-700 mb-4 font-medium">
           Have Questions? &nbsp; Call or text &nbsp;
