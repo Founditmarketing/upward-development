@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, Phone } from 'lucide-react';
 
 const B = 'https://static.wixstatic.com/media';
-const IMG1 = `${B}/d3dc00_6a2cf333f08f4ed3b769b3349238fff2~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_6a2cf333f08f4ed3b769b3349238fff2~mv2.jpg`;
-const IMG2 = `${B}/ca516a_3a53b56c1bf546f088877163fede7384~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/ca516a_3a53b56c1bf546f088877163fede7384~mv2.jpg`;
+const IMG1 = '/dirtwork-people.jpg';
+const IMG2 = '/dirtwork-body.jpg';
+const IMG3 = '/dirtwork-laser.jpg';
+const IMG4 = '/dirtwork-skidsteer.jpg';
 
 export default function DirtWork() {
   return (
@@ -50,6 +52,36 @@ export default function DirtWork() {
         </div>
         <div className="w-full md:w-1/2 overflow-hidden md:order-2">
           <img src={IMG2} alt="Excavation equipment" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
+        </div>
+      </div>
+
+      {/* Row 3: Image left, Content right */}
+      <div className="flex flex-col md:flex-row" style={{ minHeight: '400px' }}>
+        <div className="w-full md:w-1/2 overflow-hidden">
+          <img src={IMG3} alt="Laser grade surveying" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
+        </div>
+        <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Precision Grading</h2>
+            <p className="text-gray-600 leading-relaxed">
+              We use laser and GPS grade technology to ensure every job is done right the first time. Proper drainage, accurate elevations, and attention to detail are the standard on every project we take on.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Row 4: Content left, Image right */}
+      <div className="flex flex-col md:flex-row" style={{ minHeight: '400px' }}>
+        <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14 md:order-1">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Every Job, Done Right</h2>
+            <p className="text-gray-600 leading-relaxed">
+              Whether it's a small residential lot or a large commercial site, we bring the same level of commitment and professionalism to every project. Our goal is simple — leave your property better than we found it.
+            </p>
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 overflow-hidden md:order-2">
+          <img src={IMG4} alt="John Deere skid steer on job site" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
         </div>
       </div>
 

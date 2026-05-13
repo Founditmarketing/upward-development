@@ -3,8 +3,8 @@ import { ChevronRight, Phone } from 'lucide-react';
 
 const B = 'https://static.wixstatic.com/media';
 const HERO = `${B}/d3dc00_4f686de3c5a8454c87b8126ee573bfb2~mv2.jpg/v1/fill/w_1920,h_800,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_4f686de3c5a8454c87b8126ee573bfb2~mv2.jpg`;
-const IMG1 = `${B}/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_21d37a3f9a674b8a88dd5f7d08fdf344~mv2.jpg`;
-const IMG2 = `${B}/d3dc00_8fc72a6dc3d441db9a206e6ae78176d0~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_8fc72a6dc3d441db9a206e6ae78176d0~mv2.jpg`;
+const IMG1 = '/steel-body.jpg';
+const IMG2 = '/steel-body-2.jpg';
 
 export default function SteelBuildings() {
   return (
