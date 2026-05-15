@@ -1,8 +1,34 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Phone, MapPin, Star, ChevronRight, Mail } from 'lucide-react';
+import { Phone, MapPin, Mail, CheckCircle } from 'lucide-react';
 import ReviewSlider from '../components/ReviewSlider';
 
 export default function Contact() {
+  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setFormState('submitting');
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch('https://formspree.io/f/upwarddevelopment', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        setFormState('success');
+        form.reset();
+      } else {
+        setFormState('error');
+      }
+    } catch {
+      setFormState('error');
+    }
+  }
+
   return (
     <div className="pt-20">
       {/* Hero */}
@@ -87,40 +113,65 @@ export default function Contact() {
               className="bg-white p-8 rounded-sm shadow-lg border border-gray-100"
             >
               <h3 className="text-2xl font-bold mb-6">Request a Quote</h3>
-              <form className="space-y-4" action="mailto:lucas@upwarddevelopment.us" method="POST" encType="text/plain">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1">Name *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" required />
+
+              {formState === 'success' ? (
+                <div className="flex flex-col items-center justify-center py-16 text-center">
+                  <CheckCircle className="w-16 h-16 text-primary mb-4" />
+                  <h4 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h4>
+                  <p className="text-gray-600">Thanks for reaching out. We'll be in touch shortly.</p>
+                </div>
+              ) : (
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1">Name *</label>
+                      <input name="name" type="text" className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" required />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1">Phone *</label>
+                      <input name="phone" type="tel" className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" required />
+                    </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1">Phone *</label>
-                    <input type="tel" className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" required />
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+                    <input name="email" type="email" className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" />
                   </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">Project Type *</label>
-                  <select className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-white" required>
-                    <option value="">Select a service...</option>
-                    <option value="dirt">Dirt Work & Land Clearing</option>
-                    <option value="steel">Steel Buildings</option>
-                    <option value="superhome">Super Homes</option>
-                    <option value="realestate">Real Estate Investments</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">Message</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-sm transition-colors text-lg">
-                  Send Message
-                </button>
-              </form>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Project Type *</label>
+                    <select name="project_type" className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-white" required>
+                      <option value="">Select a service...</option>
+                      <option value="Dirt Work & Land Clearing">Dirt Work &amp; Land Clearing</option>
+                      <option value="Steel Buildings">Steel Buildings</option>
+                      <option value="Super Homes">Super Homes</option>
+                      <option value="Commercial Site Prep">Commercial Site Prep</option>
+                      <option value="House Pads">House Pads</option>
+                      <option value="Mobile Home Pads">Mobile Home Pads</option>
+                      <option value="Forestry Mulching">Forestry Mulching</option>
+                      <option value="Underbrush Removal">Underbrush Removal</option>
+                      <option value="Culvert Installation">Culvert Installation</option>
+                      <option value="Retention Ponds">Retention Ponds</option>
+                      <option value="Yard Grading">Yard Grading</option>
+                      <option value="Final Grading">Final Grading</option>
+                      <option value="Real Estate Investments">Real Estate Investments</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Message</label>
+                    <textarea name="message" rows={4} className="w-full px-4 py-3 rounded-sm border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"></textarea>
+                  </div>
+                  {formState === 'error' && (
+                    <p className="text-red-600 text-sm font-semibold">Something went wrong. Please call us directly at 318-452-7653.</p>
+                  )}
+                  <button
+                    type="submit"
+                    disabled={formState === 'submitting'}
+                    className="w-full bg-primary hover:bg-primary-dark text-black font-bold py-4 rounded-sm transition-colors text-lg disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {formState === 'submitting' ? 'Sending...' : 'Send Message'}
+                  </button>
+                </form>
+              )}
             </motion.div>
           </div>
         </div>
@@ -128,3 +179,4 @@ export default function Contact() {
     </div>
   );
 }
+

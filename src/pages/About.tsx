@@ -9,9 +9,9 @@ const FAITH_IMG  = `${B}/d3dc00_9daaf512b3f2459face2d7cf02402856~mv2.jpg/v1/fill
 const DANIEL_IMG = `${B}/d3dc00_1a5a680472dd42c5b3e305597dc65be6~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_1a5a680472dd42c5b3e305597dc65be6~mv2.jpg`;
 
 const reviews = [
-  { name: 'Kimberly Liles', text: 'Lucas and his crew did an outstanding job clearing our lot and installing a culvert. They were on time, professional, and the price was more than fair. Will definitely use them again!', stars: 5 },
-  { name: 'Jordan Broussard', text: 'Had them build a steel shop on our property. From start to finish the communication was great and the quality of the work exceeded my expectations. Highly recommend Upward Development.', stars: 5 },
-  { name: 'Tammy Fontenot', text: 'Great company to work with. They showed up when they said they would and did exactly what they promised. Refreshing to find a contractor that actually answers their phone!', stars: 5 },
+  { name: 'Allen Burleson', text: 'Lucas is exceptional: attentive, respectful, and genuinely invested in the outcome. He approaches your project like it\'s personal to him, which builds tremendous trust and peace of mind. They treat every project with care and attention to detail, as if it were their own.', stars: 5 },
+  { name: 'DeWanna Tarver', text: 'We used Upward Development to head up a million dollar addition to an event venue we own in south Lake Charles. They were wonderful to work with. They got there early and stayed late. Before they would make any changes to our original plans they made sure we knew the cost involved.', stars: 5 },
+  { name: 'Joshua Daniels', text: 'I hired Upward Development to build a shop for me. They met every time line that they promised me. Their quality of work definitely did not disappoint. Their price beat everyone around. Very professional and took time to explain anything that I had questions about.', stars: 5 },
 ];
 
 export default function About() {

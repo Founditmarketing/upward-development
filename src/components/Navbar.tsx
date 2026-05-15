@@ -3,10 +3,21 @@ import { Link, useLocation } from 'react-router-dom';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 
 const serviceLinks = [
+  // Construction
   { label: 'Dirt Work', to: '/services/dirt-work' },
   { label: 'Land Clearing', to: '/services/land-clearing' },
   { label: 'Steel Buildings', to: '/services/steel-buildings' },
   { label: 'Super Homes', to: '/services/super-homes' },
+  { label: 'Commercial Site Prep', to: '/services/commercial-site-prep' },
+  { label: 'House Pads', to: '/services/house-pads' },
+  { label: 'Mobile Home Pads', to: '/services/mobile-home-pads' },
+  // Land & Specialty
+  { label: 'Forestry Mulching', to: '/services/forestry-mulching' },
+  { label: 'Underbrush Removal', to: '/services/underbrush-removal' },
+  { label: 'Culvert Installation', to: '/services/culvert-installation' },
+  { label: 'Retention Ponds', to: '/services/retention-ponds' },
+  { label: 'Yard Grading', to: '/services/yard-grading' },
+  { label: 'Final Grading', to: '/services/final-grading' },
   { label: 'Real Estate Investments', to: '/services/real-estate' },
 ];
 
@@ -60,17 +71,19 @@ export default function Navbar() {
               </button>
 
               {isServicesOpen && (
-                <div className="absolute top-full left-0 w-56 bg-black border border-white/10 shadow-2xl z-50">
-                  {serviceLinks.map(s => (
-                    <Link
-                      key={s.to}
-                      to={s.to}
-                      className="block px-5 py-3 text-sm text-white hover:bg-primary hover:text-black font-semibold transition-colors border-b border-white/5 last:border-0"
-                      onClick={() => setIsServicesOpen(false)}
-                    >
-                      {s.label}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 w-96 bg-black border border-white/10 shadow-2xl z-50">
+                  <div className="grid grid-cols-2">
+                    {serviceLinks.map(s => (
+                      <Link
+                        key={s.to}
+                        to={s.to}
+                        className="block px-4 py-2.5 text-sm text-white hover:bg-primary hover:text-black font-semibold transition-colors border-b border-white/5"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        {s.label}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -138,3 +151,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
