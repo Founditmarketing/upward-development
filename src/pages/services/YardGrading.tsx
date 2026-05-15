@@ -51,9 +51,7 @@ export default function YardGrading() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase mb-4">
-              <Shovel className="w-5 h-5" /> Detailed Service Entity
-            </div>
+
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Yard Grading for Drainage</h1>
             <p className="text-xl text-gray-300 max-w-2xl">
               Upward Development solves standing water and protects your home's foundation with professional yard sloping in Lake Charles.
@@ -97,8 +95,8 @@ export default function YardGrading() {
               <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
                 <h3 className="text-xl font-bold mb-4">Water drainage issues?</h3>
                 <p className="text-gray-600 mb-6">Contact us today to rescue your yard from standing water.</p>
-                <a href="/#contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
-                  Get  a Quote
+                <a href="/contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
+                  Get a Quote
                 </a>
               </div>
             </div>

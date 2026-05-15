@@ -14,7 +14,7 @@ export default function HousePads() {
       "name": "Upward Development",
       "image": "https://www.upward-development.com/logo.png",
       "url": "https://www.upward-development.com/",
-      "telephone": "+1-337-555-0100", 
+      "telephone": "+1-318-452-7653",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Lake Charles",
@@ -94,9 +94,7 @@ export default function HousePads() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase mb-4">
-              <Home className="w-5 h-5" /> Detailed Service Entity
-            </div>
+
             <h1 className="text-5xl md:text-6xl font-bold mb-6">House Pad Construction</h1>
             <p className="text-xl text-gray-300 max-w-2xl">
               Lake Charles' premier house pad construction and soil compaction contractor ensuring proper elevation for local flood zones.
@@ -142,7 +140,7 @@ export default function HousePads() {
               <div className="bg-gray-50 p-8 border border-gray-100 rounded-sm">
                 <h3 className="text-xl font-bold mb-4">Start Your New Construction Right</h3>
                 <p className="text-gray-600 mb-6">Contact us today to schedule an evaluation of your land and get a quote on your house pad.</p>
-                <a href="/#contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
+                <a href="/contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm transition-colors">
                   Get a Free Estimate
                 </a>
               </div>

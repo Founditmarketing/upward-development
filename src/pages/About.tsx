@@ -69,7 +69,7 @@ export default function About() {
               </div>
               <h3 className="text-lg font-bold text-gray-900">Faith LaCour</h3>
               <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">Operations Coordinator</p>
-              <a href="mailto:faith@upwardedevelopment.us" className="text-xs text-gray-500 hover:text-primary">faith@upwardedevelopment.us</a>
+              <a href="mailto:faith@upwarddevelopment.us" className="text-xs text-gray-500 hover:text-primary">faith@upwarddevelopment.us</a>
             </div>
 
             <div className="flex flex-col">
