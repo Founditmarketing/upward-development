@@ -18,9 +18,9 @@ export default function DirtWork() {
         <div className="relative z-10 text-center px-6 py-20">
           <h1 className="text-5xl sm:text-7xl font-bold text-white drop-shadow-lg mb-4">DIRT WORK</h1>
           <p className="text-xl text-white/90 mb-8">Ponds, house pads, driveways, culvert installations and just about anything else that you can do with dirt.</p>
-          <a href="tel:3184527653" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-black font-bold px-10 py-4 text-sm tracking-widest uppercase transition-colors">
-            <Phone className="w-4 h-4" /> Send Me Info!
-          </a>
+          <div className="inline-flex items-center gap-2 bg-primary text-black font-bold px-10 py-4 text-sm tracking-widest uppercase cursor-default select-all">
+            <Phone className="w-4 h-4" /> 318-452-7653
+          </div>
         </div>
       </section>
 
