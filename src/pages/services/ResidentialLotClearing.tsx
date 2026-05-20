@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, Phone } from 'lucide-react';
 
 const B = 'https://static.wixstatic.com/media';
-const IMG1 = `${B}/d3dc00_910808829d0f4ccf873cb78e0ec85b6f~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_910808829d0f4ccf873cb78e0ec85b6f~mv2.jpg`;
-const IMG2 = '/landclearing-aerial.jpg';
+const IMG1 = '/landclearing-aerial.jpg';
+const IMG2 = `${B}/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg`;
 
 export default function LandClearing() {
   return (
