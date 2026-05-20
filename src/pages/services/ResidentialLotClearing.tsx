@@ -21,18 +21,13 @@ export default function LandClearing() {
         </div>
       </section>
 
-      {/* Row 1: Image top-left, Content top-right */}
-      <div className="flex flex-col md:flex-row" style={{ minHeight: '400px' }}>
-        <div className="w-full md:w-1/2 overflow-hidden">
-          <img src={IMG1} alt="Land clearing" className="w-full h-full object-cover" style={{ minHeight: '400px' }} />
-        </div>
-        <div className="w-full md:w-1/2 bg-white flex items-center px-10 lg:px-16 py-14">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">The Right People</h2>
-            <p className="text-gray-600 leading-relaxed">
-              We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. If that's not enough, we also have a calendar and a plan and we talk about it with our customers and our team. You'll love it.
-            </p>
-          </div>
+      {/* Row 1: Content full-width */}
+      <div className="bg-white flex items-center justify-center px-10 lg:px-16 py-14">
+        <div className="max-w-3xl">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">The Right People</h2>
+          <p className="text-gray-600 leading-relaxed">
+            We answer phone calls, text messages and emails. Believe it or not, that sets us apart in this industry. If that's not enough, we also have a calendar and a plan and we talk about it with our customers and our team. You'll love it.
+          </p>
         </div>
       </div>
 
