@@ -82,7 +82,7 @@ export default function About() {
 
             <div className="flex flex-col">
               <div className="overflow-hidden mb-4" style={{ aspectRatio: '1' }}>
-                <img src="/team-ryan.jpg" alt="Ryan" className="w-full h-full object-cover object-top" />
+                <img src="/team-ryan.jpg" alt="Ryan" className="w-full h-full object-cover object-center" />
               </div>
               <h3 className="text-lg font-bold text-gray-900">Ryan</h3>
               <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">Building Specialist</p>
