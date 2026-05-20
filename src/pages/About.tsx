@@ -85,7 +85,7 @@ export default function About() {
                 <img src="/team-ryan.jpg" alt="Ryan" className="w-full h-full object-cover object-top" />
               </div>
               <h3 className="text-lg font-bold text-gray-900">Ryan</h3>
-              <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">Team Member</p>
+              <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">Building Specialist</p>
             </div>
 
           </div>
