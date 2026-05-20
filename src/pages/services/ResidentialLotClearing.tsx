@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, Phone } from 'lucide-react';
 
 const B = 'https://static.wixstatic.com/media';
-const IMG1 = '/landclearing-aerial.jpg';
+const IMG1 = `${B}/d3dc00_910808829d0f4ccf873cb78e0ec85b6f~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_910808829d0f4ccf873cb78e0ec85b6f~mv2.jpg`;
 const IMG2 = `${B}/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg/v1/fill/w_980,h_600,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/d3dc00_339e2d6a5b424ff19843ea5309d64ae0~mv2.jpg`;
 
 export default function LandClearing() {
@@ -34,6 +34,11 @@ export default function LandClearing() {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Aerial photo separator */}
+      <div className="w-full overflow-hidden" style={{ height: '500px' }}>
+        <img src="/landclearing-aerial.jpg" alt="Aerial view of cleared land" className="w-full h-full object-cover object-center" />
       </div>
 
       {/* Row 2: Content bottom-left, Image bottom-right */}
