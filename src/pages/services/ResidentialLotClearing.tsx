@@ -37,8 +37,10 @@ export default function LandClearing() {
       </div>
 
       {/* Aerial photo separator */}
-      <div className="w-full overflow-hidden" style={{ height: '500px' }}>
-        <img src="/landclearing-aerial.jpg" alt="Aerial view of cleared land" className="w-full h-full object-cover object-center" />
+      <div className="bg-white py-8">
+        <div className="w-full overflow-hidden" style={{ height: '500px' }}>
+          <img src="/landclearing-aerial.jpg" alt="Aerial view of cleared land" className="w-full h-full object-cover object-center" />
+        </div>
       </div>
 
       {/* Row 2: Content bottom-left, Image bottom-right */}
