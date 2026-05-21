@@ -14,10 +14,12 @@ import SuperHomes from './pages/services/SuperHomes';
 import RealEstate from './pages/services/RealEstate';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white font-sans text-gray-900 flex flex-col">
         <Navbar />
         <div className="flex-grow">
