@@ -13,10 +13,16 @@ export default function Contact() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch('https://formspree.io/f/upwarddevelopment', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          phone: data.get('phone'),
+          email: data.get('email'),
+          projectType: data.get('project_type'),
+          message: data.get('message'),
+        }),
       });
       if (res.ok) {
         setFormState('success');
