@@ -19,7 +19,7 @@ export default async function handler(req: any, res: any) {
   try {
     const { data, error } = await resend.emails.send({
       from: 'Upward Development <hello@upwarddevelopment.us>',
-      to: ['owen@founditmarketing.com'],
+      to: ['lucas@upwarddevelopment.us'],
       replyTo: email || undefined,
       subject: `New Quote Request: ${projectType} — ${name}`,
       html: `
