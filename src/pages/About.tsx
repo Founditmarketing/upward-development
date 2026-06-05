@@ -74,7 +74,7 @@ export default function About() {
 
             <div className="flex flex-col">
               <div className="overflow-hidden mb-4" style={{ aspectRatio: '1' }}>
-                <img src={DANIEL_IMG} alt="Daniel LaCour" className="w-full h-full object-cover object-top" />
+                <img src="/team-daniel.jpg" alt="Daniel LaCour" className="w-full h-full object-cover object-top" />
               </div>
               <h3 className="text-lg font-bold text-gray-900">Daniel LaCour</h3>
               <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">Lead Operator</p>
