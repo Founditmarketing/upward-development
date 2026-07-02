@@ -13,15 +13,14 @@ export default function Contact() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://www.founditos.com/api/contact-form/ce1bbb59-a3c6-45e1-9360-42e4362c4877', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: data.get('name'),
-          phone: data.get('phone'),
-          email: data.get('email'),
-          projectType: data.get('project_type'),
-          message: data.get('message'),
+          name: data.get('name') as string,
+          email: data.get('email') as string,
+          phone: data.get('phone') as string,
+          message: `Project: ${data.get('project_type') || 'General'}\n\n${data.get('message') || ''}`,
         }),
       });
       if (res.ok) {
