@@ -17,6 +17,8 @@ export default function Navbar() {
 
   const isActive = (path: string) => location.pathname === path;
   const isServiceActive = serviceLinks.some(s => location.pathname === s.to);
+  // Keep Blog highlighted on individual post pages too.
+  const isBlogActive = location.pathname.startsWith('/blog');
 
   return (
     <nav className="fixed w-full z-50 bg-black">
@@ -85,6 +87,15 @@ export default function Navbar() {
             </Link>
 
             <Link
+              to="/blog"
+              className={`px-5 py-2 text-sm font-semibold transition-colors ${
+                isBlogActive ? 'bg-primary text-black' : 'text-white hover:text-primary'
+              }`}
+            >
+              Blog
+            </Link>
+
+            <Link
               to="/contact"
               className={`px-5 py-2 text-sm font-semibold transition-colors ${
                 isActive('/contact') ? 'bg-primary text-black' : 'text-white hover:text-primary'
@@ -124,6 +135,7 @@ export default function Navbar() {
           </div>
 
           <Link to="/about" className="block py-2.5 text-white font-semibold hover:text-primary border-t border-white/10" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+          <Link to="/blog" className="block py-2.5 text-white font-semibold hover:text-primary border-t border-white/10" onClick={() => setIsMenuOpen(false)}>Blog</Link>
           <Link to="/contact" className="block py-2.5 text-white font-semibold hover:text-primary border-t border-white/10" onClick={() => setIsMenuOpen(false)}>Contact</Link>
 
           <a

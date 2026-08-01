@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
             <img src="/logo-2.png" alt="Upward Development" className="h-10 object-contain brightness-200 invert mb-4" />
@@ -23,6 +23,16 @@ export default function Footer() {
               <li><Link to="/services/steel-buildings" className="hover:text-primary transition-colors">Steel Buildings</Link></li>
               <li><Link to="/services/super-homes" className="hover:text-primary transition-colors">Super Homes</Link></li>
               <li><Link to="/services/real-estate" className="hover:text-primary transition-colors">Real Estate Investments</Link></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-white font-bold uppercase tracking-wider text-sm mb-4">Company</h4>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 

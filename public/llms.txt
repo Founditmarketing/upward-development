@@ -19,6 +19,7 @@
 - Homepage: https://www.upwarddevelopment.us/
 - About: https://www.upwarddevelopment.us/about
 - Contact: https://www.upwarddevelopment.us/contact
+- Blog: https://www.upwarddevelopment.us/blog
 - Dirt Work: https://www.upwarddevelopment.us/services/dirt-work
 - Land Clearing: https://www.upwarddevelopment.us/services/land-clearing
 - Steel Buildings: https://www.upwarddevelopment.us/services/steel-buildings
