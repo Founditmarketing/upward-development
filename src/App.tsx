@@ -17,11 +17,19 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import ScrollToTop from './components/ScrollToTop';
+import SeoManager from './components/SeoManager';
+import ServiceAreas from './pages/ServiceAreas';
+import ServiceAreaPage from './pages/ServiceArea';
 
-export default function App() {
+/**
+ * Everything inside the router. Split out so the static prerender step can
+ * wrap it in a StaticRouter instead of a BrowserRouter.
+ */
+export function AppShell() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
+      <SeoManager />
       <div className="min-h-screen bg-white font-sans text-gray-900 flex flex-col">
         <Navbar />
         <div className="flex-grow">
@@ -33,6 +41,8 @@ export default function App() {
             <Route path="/services/super-homes" element={<SuperHomes />} />
             <Route path="/services/real-estate" element={<RealEstate />} />
             <Route path="/about" element={<About />} />
+            <Route path="/service-areas" element={<ServiceAreas />} />
+            <Route path="/service-areas/:slug" element={<ServiceAreaPage />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
@@ -40,6 +50,14 @@ export default function App() {
         </div>
         <Footer />
       </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <AppShell />
     </Router>
   );
 }

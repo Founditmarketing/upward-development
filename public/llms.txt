@@ -20,11 +20,18 @@
 - About: https://www.upwarddevelopment.us/about
 - Contact: https://www.upwarddevelopment.us/contact
 - Blog: https://www.upwarddevelopment.us/blog
+- Service Areas: https://www.upwarddevelopment.us/service-areas
 - Dirt Work: https://www.upwarddevelopment.us/services/dirt-work
 - Land Clearing: https://www.upwarddevelopment.us/services/land-clearing
 - Steel Buildings: https://www.upwarddevelopment.us/services/steel-buildings
 - Super Homes: https://www.upwarddevelopment.us/services/super-homes
 - Real Estate: https://www.upwarddevelopment.us/services/real-estate
+
+## Service Area
+Based in Lake Charles, LA. Serves Calcasieu Parish and surrounding parishes in Southwest Louisiana.
+Individual service-area pages: Lake Charles, Moss Bluff, Westlake, Sulphur, Carlyss, Iowa, Vinton,
+DeQuincy (Calcasieu Parish); Jennings (Jefferson Davis Parish); Kinder (Allen Parish);
+DeRidder (Beauregard Parish). No offices, yards or crews are located outside Lake Charles.
 
 ## Social
 - Instagram: https://www.instagram.com/upwarddevelopmentllc/

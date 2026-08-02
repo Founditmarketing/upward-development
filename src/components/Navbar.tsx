@@ -19,6 +19,7 @@ export default function Navbar() {
   const isServiceActive = serviceLinks.some(s => location.pathname === s.to);
   // Keep Blog highlighted on individual post pages too.
   const isBlogActive = location.pathname.startsWith('/blog');
+  const isAreasActive = location.pathname.startsWith('/service-areas');
 
   return (
     <nav className="fixed w-full z-50 bg-black">
@@ -26,7 +27,7 @@ export default function Navbar() {
         <div className="flex justify-between h-[70px] items-center">
 
           {/* Logo */}
-          <Link to="/" className="flex items-center shrink-0">
+          <Link to="/" className="flex items-center shrink-0" aria-label="Upward Development — home">
             <img
               src="/logo-2.png"
               alt="Upward Development"
@@ -87,6 +88,15 @@ export default function Navbar() {
             </Link>
 
             <Link
+              to="/service-areas"
+              className={`px-5 py-2 text-sm font-semibold transition-colors ${
+                isAreasActive ? 'bg-primary text-black' : 'text-white hover:text-primary'
+              }`}
+            >
+              Service Areas
+            </Link>
+
+            <Link
               to="/blog"
               className={`px-5 py-2 text-sm font-semibold transition-colors ${
                 isBlogActive ? 'bg-primary text-black' : 'text-white hover:text-primary'
@@ -135,6 +145,7 @@ export default function Navbar() {
           </div>
 
           <Link to="/about" className="block py-2.5 text-white font-semibold hover:text-primary border-t border-white/10" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+          <Link to="/service-areas" className="block py-2.5 text-white font-semibold hover:text-primary border-t border-white/10" onClick={() => setIsMenuOpen(false)}>Service Areas</Link>
           <Link to="/blog" className="block py-2.5 text-white font-semibold hover:text-primary border-t border-white/10" onClick={() => setIsMenuOpen(false)}>Blog</Link>
           <Link to="/contact" className="block py-2.5 text-white font-semibold hover:text-primary border-t border-white/10" onClick={() => setIsMenuOpen(false)}>Contact</Link>
 

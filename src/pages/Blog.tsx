@@ -2,20 +2,11 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Calendar, ArrowRight } from 'lucide-react';
 import { sortedPosts, blogCategories, formatDate } from '../data/blogPosts';
-import useSeo from '../hooks/useSeo';
 
 const ALL = 'All Posts';
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState(ALL);
-
-  useSeo({
-    title: 'Blog | Upward Development — Lake Charles, LA',
-    description:
-      'Practical advice on dirt work, land clearing, steel buildings, storm-ready construction and Louisiana land from the Upward Development team in Lake Charles, LA.',
-    path: '/blog',
-    image: '/services-bg.jpg',
-  });
 
   const [featured, ...rest] = sortedPosts;
   const visible =

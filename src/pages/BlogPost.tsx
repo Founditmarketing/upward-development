@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { ChevronRight, ArrowLeft, Calendar, User } from 'lucide-react';
 import { getPostBySlug, sortedPosts, formatDate, type BlogBlock } from '../data/blogPosts';
-import useSeo from '../hooks/useSeo';
 
 function renderBlock(block: BlogBlock, key: number) {
   switch (block.type) {
@@ -36,11 +35,6 @@ function renderBlock(block: BlogBlock, key: number) {
 }
 
 function NotFound() {
-  useSeo({
-    title: 'Post Not Found | Upward Development',
-    description: 'The article you are looking for is not available.',
-    path: '/blog',
-  });
 
   return (
     <div className="pt-[70px]">
@@ -70,13 +64,6 @@ export default function BlogPost() {
 }
 
 function Article({ post }: { post: NonNullable<ReturnType<typeof getPostBySlug>> }) {
-  useSeo({
-    title: `${post.title} | Upward Development`,
-    description: post.excerpt,
-    path: `/blog/${post.slug}`,
-    image: post.image,
-  });
-
   const related = sortedPosts.filter(p => p.slug !== post.slug).slice(0, 3);
 
   return (
